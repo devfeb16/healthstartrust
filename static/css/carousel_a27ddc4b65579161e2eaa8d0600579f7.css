@@ -1,0 +1,144 @@
+.simplifiedChartMobile .carousel-container {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+.carousel-container {
+    margin-top: 1rem !important;
+}
+
+/*Carousel Ribbon*/
+.ribbon-carousel {
+    top: 3px;
+    background-color: #09BCBE;
+}
+.ribbon-carousel::before {
+    border-top: 7px solid #209395;
+}
+.ribbon-carousel::after {
+    border-top: 13.2px solid #09BCBE;
+    border-bottom: 13.2px solid #09BCBE;
+}
+.ribbon-carousel .ribbon-text {
+    font-size: 12px;
+}
+/*Carousel Card assignment*/
+#carouselCard1 {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    grid-area: carousel-p1;
+}
+#carouselCard1:hover {
+    margin-bottom: 1rem;
+}
+#carouselCard2 {
+    grid-area: carousel-p2;
+}
+#carouselCard3 {
+    grid-area: carousel-p3;
+}
+.carousel-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1rem;
+    grid-template-areas:
+        'carousel-p2 carousel-p1 carousel-p3';
+    place-items: center;
+    place-content: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.carousel-wrapper {
+    position: relative;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.11);
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%
+}
+.carousel-wrapper:hover {
+    box-shadow: 0 0 18px 5px rgba(0,0,0,.4);
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}
+.carousel-content-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+.carousel-wrapper.card-2 .carousel-content-box img, .carousel-wrapper.card-3 .carousel-content-box img {
+    margin-left: 0 !important;
+}
+.carousel-rating-pt {
+    font-family: MontBold, sans-serif !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    line-height: 2rem;
+    color: #000000;
+}
+.carousel-arrow {
+    margin-left: 5px;
+}
+.carousel-rating-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+.carousel-cta-btn {
+    color: #e4405f;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: .5rem;
+}
+.carousel-cta-btn:hover {
+    color: #e4405f;
+    text-decoration: underline;
+}
+.carousel-image {
+    width: 90%;
+    padding: 0;
+}
+#carouselCard1 .carousel-image {
+    width: 100%;
+}
+.simplifiedChartMobile #carouselCard1 .carousel-image {
+    width: 90%;
+}
+.carousel-image-container p {
+    font-size: 14px;
+    margin-top: .5rem;
+    margin-bottom: 0;
+    color: #666666;
+}
+.global-chart .carousel-image-container {
+    margin-left: 1rem;
+}
+/* For Devices <768 - Few elements share same functionality in Small and Medium Devices */
+@media only screen and (max-width: 767px) {
+    .carousel-row {
+        margin-top: -100px;
+    }
+    .carousel-products {
+        margin-top: -35px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .carousel-row {
+        margin-top: -70px;
+    }
+}
+@media only screen and (max-width: 1199px) {
+    .carousel-container {
+        display: none;
+    }
+}
+

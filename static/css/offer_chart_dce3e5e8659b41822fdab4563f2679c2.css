@@ -1,0 +1,1464 @@
+/*Vendor Logo Image*/
+.top-choices .card .product-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    grid-area: vendorLogo;
+}
+
+/*CSS for Mattresses Landing layout*/
+.updated_site_layout .top-choices .card .product-image {
+    margin-top: -30px;
+}
+/*Vendor Logo Image end*/
+
+
+/*no of reviews from XX websites tagline*/
+.rating-line {
+    font-weight: 700;
+    font-size: 13px;
+    color: #72798A;
+}
+
+/*Filter bar above chart*/
+.card-header {
+    background: #E2E2E2;
+    padding-bottom: 1rem !important;
+}
+.card-header p {
+    font-size: 14px;
+}
+
+
+/*Location=State Filter Box*/
+#state-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    grid-area: filter-two;
+    justify-self: start;
+}
+
+#state-box p {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0 !important;
+    margin-right: 10px !important;
+}
+/*Location=State Filter Box Ends*/
+
+#disc-box {
+    grid-area: filter-three;
+    justify-self: end;
+    margin-top: .25rem;
+}
+
+#filter-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "filter-two filter-three";
+    align-items: center;
+    white-space: nowrap;
+}
+
+
+.filter-bar {
+    font-size: 12px !important;
+}
+select {
+    font-size: 12px;
+    color: #000000;
+    width: 195px;
+    height: auto;
+    padding: 2px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+select option {
+    color: #000000;
+}
+
+select option:first-child {
+    color: #000000;
+}
+
+/*Filter bar above chart end*/
+
+.reviews-section .container .products .top-choices .card .row {
+    padding-top: 1rem !important;
+    padding-bottom: 1.5rem !important;
+}
+.top-choices .chart-card-wrapper {
+    grid-area: chartCardWrapper
+}
+
+/*vendor cards*/
+/*First part of Vendor Card*/
+.top-choices .product-start {
+    grid-area: productStartSection;
+}
+.top-choices .product-start .card-body {
+    grid-area: productStartCardBody;
+}
+/*Ranking Number*/
+.chart-rank {
+    grid-area: chartRank;
+}
+.product-count, .product-count-life  {
+    color: #A5A5A5;
+    font-size: 31px;
+    font-weight: 600;
+}
+.product-count {
+    grid-area: productCount;
+}
+.products {
+    margin-top: -65px;
+}
+body:has(.home-image.services-icon) .products {
+    margin-top: -35px;
+}
+.products.moveUp {
+    margin-top: -130px;
+}
+
+.products .card-header {
+    border-radius: 0;
+}
+
+.top-choices .card {
+    box-shadow: 5.13px 3.63px 27px 0px rgba(192, 221, 238, .5);
+}
+
+/*First part of Vendor Card end*/
+
+.top-choices .product-details {
+    grid-area: productDetailsSection;
+}
+.top-choices .product-details .card-body {
+    height: 100%;
+    grid-area: productDetailsCardBody
+}
+/*Middle Section of Vendor Card*/
+.top-choices .topPromoLine {
+    grid-area: topPromotion;
+}
+.top-choices .card .product-details-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0 !important;
+    grid-area: productDetailsList
+}
+
+.top-choices .card .product-details-list li {
+    color: #575F72;
+    font-size: 16px;
+    margin-bottom: 16px;
+    padding-left: 1.25rem;
+    text-indent: -1.5rem;
+}
+
+.top-choices .card .product-details-list li:before {
+    content: '\2713';
+    font-weight: bold;
+    padding-right: .25rem;
+}
+.top-choices .product-title {
+    grid-area: vendorCompanyName;
+}
+.simplifiedChartMobile .top-choices .product-details .product-title,
+.global-chart .top-choices .product-title  {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #09BCBE;
+}
+.simplifiedChartMobile .top-choices .product-details .product-title {
+    margin-top: .5rem;
+    margin-bottom: 0;
+}
+.global-chart .top-choices .product-title {
+    margin-bottom: .75rem;
+}
+
+.global-chart .top-choices:has(.vendorCardBadge) .product-title {
+    margin-bottom: .5rem;
+}
+    /*Card Badge*/
+.simplifiedChartMobile p.vendorCardBadge {
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: #0A3773;
+    border-radius: 20px;
+    padding: .5rem 1rem;
+    width: fit-content;
+    grid-area: vendorCardBadge;
+    margin-bottom: .5rem;
+}
+.simplifiedChartMobile p.vendorCardBadge::before {
+    content: '\f005';
+    color: #FFFFFF;
+    font-weight: 800;
+    font-family: 'FontAwesome';
+    padding-right: 4px;
+}
+.simplifiedChartMobile p.vendorCardBadge span {
+    padding-left: .5rem;
+}
+.financial-chart .topPromoLine {
+    font-size: 10pt;
+    margin-bottom: 0;
+    padding: .25rem 0 .5rem 0;
+}
+/*Middle Section of Vendor Card end*/
+
+/*Third Part of Vendor Card*/
+.top-choices .product-pricing {
+    grid-area: productPricingSection;
+}
+.top-choices .product-pricing .card-body {
+    grid-area: productPricingCardBody
+}
+.product-pricing .top-choice-wrapper {
+    font-size: 14px;
+    color: #000;
+}
+
+.product-pricing .top-choice-wrapper {
+    padding-left: 1.5rem !important;
+}
+
+.col-md-4.col-lg-3.product-pricing.text-center{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews-section .col-md-4.col-lg-3.product-pricing.text-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.offer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-choices .card .product-pricing button.btn.btn-link {
+    color: #09bcbe;
+    text-decoration: none;
+}
+
+.top-choices.bg-white.pt-4 .card .row .product-start .card-body .product-count, .top-choices.bg-white.pt-4 .card .row .product-start .card-body .product-count-life  {
+    display: none;
+}
+
+/*Offer button*/
+.btn-view-plan {
+    text-transform: uppercase;
+    font-size: 14pt;
+    font-weight: 500;
+    width: 100%;
+    grid-area: buttonViewPlan;
+}
+
+.btn-view-plan.cta {
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+}
+
+/*Call Button*/
+.single-des-rt-blk .btn-phone .small-info {
+    display: none;
+}
+
+.single-des-rt-blk .btn-phone {
+    width: 100%;
+}
+
+.single-des-rt-blk .btn-phone > a:hover {
+    background-color: #0AB6B9;
+    color: #fff;
+}
+
+.single-des-rt-blk .btn-phone > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 18px;
+    background-color: transparent;
+    border: 2px solid #0AB6B9;
+    font-weight: 400;
+    color: #fff;
+    /*color: #0AB6B9;*/
+    padding: 5px 15px;
+    border-radius: 7px;
+    transition: all .2s ease-in;
+}
+
+.single-des-rt-blk .btn-phone > a > i {
+    display: inline-flex;
+    margin-right: 7px;
+    transform: rotate(90deg);
+}
+
+.single-des-srt-conten-wrp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-des-rt-blk {
+    max-height: 195px !important;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.single-des-rt-blk .rating-wrp-right, .single-des-rt-blk .main-btn, .single-des-rt-blk .btn-phone {
+    margin-bottom: 7px;
+}
+
+.single-des-rt-blk .btn-phone {
+    margin-bottom: 15px;
+}
+
+.btn-phone > span {
+    display: none;
+}
+/*Call Button end*/
+
+/* For Call Button */
+.call-btn {
+    grid-area: callButtonContainer
+}
+.btn-offer-call {
+    color: #e4405f;
+    grid-area: phoneNumberButton;
+}
+
+.btn-offer-call:hover {
+    color: #fff;
+}
+
+.call-btn .call-no, .call-btn .call-text {
+    display: none;
+}
+/* For Call Button ends*/
+
+/*tooltip tags*/
+.tooltip-main {
+    background: #000;
+    color: #fff;
+    font-weight: 500;
+    position: absolute;
+    left: 32px;
+    bottom: 42px;
+    padding: 9px;
+    box-sizing: border-box;
+    box-shadow: 0 0 9px 0 rgb(192, 221, 238);
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 13px;
+    white-space: normal !important;
+    width: auto;
+    opacity: 0;
+    transition: all cubic-bezier(0, 0, 0.2, 1) 0.5s;
+}
+
+.tooltip-main.topChoice {
+    bottom: 24px;
+}
+
+.toolTip-usercount {
+    display: inline-block;
+    width: 145px !important;
+    font-weight: 500;
+}
+
+.tooltip-main:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0px;
+    right: 0;
+    left: 50%;
+    top: 0;
+    border: 8px solid transparent;
+    border-top: 0;
+    border-bottom: 8px solid rgb(192, 221, 238);
+    transform: translate(-50%, calc(-100%));
+}
+
+.tooltip-main.show {
+    opacity: 1;
+}
+
+.global-chart .top-choices .product-pricing .card-body:has(.chart-review-link) .number-tooltip {
+    margin-bottom: 0;
+}
+/*tooltips end*/
+
+/* For Offer Ribbons */
+.ribbon-container {
+    grid-area: ribbonContainer;;
+}
+.ribbon-wrapper:nth-child(even) {
+    margin-right: 4%;
+}
+
+span.ribbon-text {
+    font-weight: 500;
+    color: white;
+}
+
+.ribbon {
+    width: auto;
+    line-height: 18px;
+    padding: 4px 10px 4px 15px;
+    position: absolute;
+    left: -12px;
+    top: -5px;
+    background: #e6d00a;
+    color: white;
+}
+
+.ribbon:before, .ribbon:after {
+    content: "";
+    position: absolute;
+}
+
+.ribbon:before {
+    height: 0px;
+    width: 0px;
+    bottom: -7px;
+    left: 0.1px;
+    border-top: 7px solid #c2af06;
+    border-left: 12px solid transparent;
+}
+
+.ribbon:after {
+    height: 0px;
+    width: 0px;
+    right: -14.5px;
+    top: 0px;
+    border-top: 13.2px solid #e6d00a;
+    border-bottom: 13.2px solid #e6d00a;
+    border-right: 15px solid transparent;
+}
+
+.ribbon.blue {
+    background: #19b8fd;
+    top: -10px;
+}
+
+.ribbon.blue:before {
+    border-top: 7px solid #257da3;
+}
+
+.ribbon.blue:after {
+    border-top: 13.2px solid #19b8fd;
+    border-bottom: 13.2px solid #19b8fd;
+}
+
+.ribbon.yellow {
+    top: -10px;
+}
+/* For Offer Ribbons end*/
+
+/* Rate_here Styles */
+a.rate-here:hover {
+    text-decoration: underline;
+}
+
+form.rating {
+    user-select: none;
+}
+
+/* Rate_here > Buyer Page Rating Stars */
+.rating {
+    display: inline-block;
+    position: relative;
+    height: 25px;
+    line-height: 25px;
+    font-size: 25px;
+}
+
+.rating label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    cursor: pointer;
+}
+
+.rating label:last-child {
+    position: static;
+}
+
+.rating label:nth-child(1) {
+    z-index: 5;
+}
+
+.rating label:nth-child(2) {
+    z-index: 4;
+}
+
+.rating label:nth-child(3) {
+    z-index: 3;
+}
+
+.rating label:nth-child(4) {
+    z-index: 2;
+}
+
+.rating label:nth-child(5) {
+    z-index: 1;
+}
+
+.rating label input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.rating label .icon {
+    float: left;
+    color: transparent;
+}
+
+.rating label:last-child .icon {
+    color: #CDCDCD;
+}
+
+.rating:not(:hover) label input:checked ~ .icon,
+.rating:hover label:hover input ~ .icon {
+    color: #FBBF24;
+}
+
+.rating label input:focus:not(:checked) ~ .icon:last-child {
+    color: #CDCDCD;
+}
+
+#chartCardBottom .topchoiceComponent .product-title {
+    color: #e4405f;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    text-underline-offset: .5rem;
+}
+
+/*P1 highlight css*/
+.p1-highlighted .top-choices:nth-child(1) .row {
+    border: 2px solid #09BCBE;
+}
+
+.negative-offers-wrapper .product-details-list li:first-child {
+    font-weight: normal !important;
+}
+/*P1 under card*/
+.top-choices:has(.under-card) .card {
+    margin-bottom: 0 !important;
+}
+.top-choices:has(.under-card) {
+    margin-bottom: 1rem;
+}
+
+.under-card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 0 0 20px 20px;
+    background-color: rgba(0,0,0,.05);
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+/*Chart Break*/
+.chart-break-card.container.p-2 {
+    padding: 0 !important;
+}
+.chart-break-container, .bg-light {
+    padding: 1rem .5rem;
+}
+.chart-break-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#chartCardBottom .bg-light {
+    display: none;
+}
+
+/*Secondary Chart*/
+.second-chart-header{
+    padding-bottom: 1rem;
+}
+.second-chart-title {
+    font-weight: 600;
+    color: #09bcbe;
+    font-size: 28px;
+    margin-top: 1rem;
+}
+.second-chart-tagline {
+    color: #484848;
+    font-size: 12pt;
+    font-weight: 400;
+}
+.second-chart-disclaim-container {
+    margin: 1rem auto ;
+    width: 100%;
+}
+.second-chart-disclaim-container a {
+    font-size: 12pt;
+    color: #09BCBE;
+    text-decoration: underline;
+}
+.second-chart-disclaim-container a:hover {
+    color: #484848;
+    font-style: italic;
+}
+.content-above-second-container {
+    margin-top: 1rem;
+}
+
+.global-chart .second-chart-card .ribbon, .global-chart .second-chart-card .product-count {
+    display: none;
+}
+
+/* For Devices Under 450 - To control Extra Samll behaviour - START*/
+@media only screen and (max-width: 385px) {
+    p.text-right.text-md-center {
+        margin-top: 0px !important;
+    }
+}
+/* For Devices Under 365px - To control Extra Samll behaviour - END*/
+
+/*smaller mobile devices*/
+@media (max-width: 400px) {
+    .single-des-rt-blk .main-btn a {
+        font-size: 19px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .single-des-rt-blk .btn-phone > a > i {
+        margin-right: 3px;
+    }
+
+    .single-des-rt-blk .btn-phone > a.phone-inner-button {
+        font-size: 17px;
+    }
+
+    .single-des-rt-blk {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .single-des-rt-blk > .btn-phone {
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .single-des-rt-blk .btn-phone > a.phone-inner-button {
+    font-size: 21px;
+    min-height: 48px;
+    }
+
+    .single-des-rt-blk .main-btn a {
+    font-size: 24px;
+    padding: 5px 10px;
+    min-height: 48px;
+    }
+}
+
+/*Devices >768px aka Mobile devices*/
+@media only screen and (max-width: 575px) {
+    .card .ribbon-wrapper span.ribbon {
+    left: -12px;
+    top: -7px;
+    }
+
+    .call-btn .call-no {
+    margin-left: 13% !important;
+    font-size: 11px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .number-tooltip {
+        display: none !important;
+        left: 0;
+    }
+}
+
+/* For Devices <768 - Few elements share same functionality in Small and Medium Devices */
+@media only screen and (max-width: 767px) {
+    /*vendor iamge*/
+    .top-choices .card .product-image {
+        width: 150px;
+        position: relative;
+        top: 50%;
+        left: 20%;
+        transform: translate(-50%, 0%);
+    }
+
+    .single-des-rt-blk > .btn-phone > span {
+        bottom: -17px;
+    }
+
+    .single-des-rt-blk .btn-phone > a.phone-inner-button {
+        min-height: 57px;
+    }
+
+    .single-des-srt-inner-content-wrp {
+        margin-bottom: 15px;
+    }
+
+    /*vendor card*/
+    .products, body:has(.home-image.services-icon) .products {
+        margin-top: -22px;
+    }
+
+    .products.moveUp {
+        margin-top: -32px;
+    }
+
+    .card-header p {
+        font-size: 10px;
+        color: #484848;
+    }
+
+    .card-header {
+        padding: .5rem !important;
+    }
+
+    .product-count {
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+
+    .top-choices .card .product-details-list li {
+        font-size: 13.5px;
+        margin-bottom: 10px;
+    }
+
+    .product-start > .card-body {
+        padding-top: 0.5rem;
+        padding-bottom: 0.25rem;
+        min-height: 70px;
+    }
+    .global-chart .top-choices:has(.ribbon-wrapper) .product-start {
+        margin-top: 1.5rem !important;
+    }
+
+    p.text-right.text-md-center {
+        margin-top: -13px !important;
+    }
+
+    .inner-contnet-des span {
+        top: 0;
+        left: -12px;
+    }
+
+    .top-choice-wrapper {
+        padding-left: 2.5rem !important;
+    }
+
+    .top-choices .card > .row {
+        position: relative;
+    }
+
+    .top-choices .card > .row > .col-md-4.col-lg-3.product-pricing {
+        position: static;
+    }
+
+    .product-details .card-body {
+        padding-bottom: 0;
+        padding-top: 1rem;
+        margin-top: 0;
+    }
+
+    .product-pricing .card-body {
+        padding-top: 0;
+        margin-top: .5rem;
+    }
+
+    .col-md-4.col-lg-3.product-pricing.text-center {
+        display: flex;
+    }
+
+    .btn-view-plan {
+        display: block;
+        width: 100%;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .offer-container {
+        display: block;
+    }
+
+    .btn-offer-call {
+        display: block;
+        width: 100%;
+        font-size: 19px;
+        font-weight: 500;
+    }
+
+    .call-btn .call-no {
+        margin-left: 15% !important;
+    }
+
+    .call-btn .call-no, .call-btn .call-text {
+        margin-top: 3px;
+    }
+    /*vendor card ends*/
+
+    .tooltip-main {
+        left: 16px !important;
+        width: 91% !important;
+        bottom: -9px !important;
+        padding: 4px 10px !important;
+    }
+
+    .toolTip-usercount {
+        width: auto !important;
+    }
+
+    .reviews-section .container .products .top-choices .card .row {
+        padding-top: 1rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    /*Location=State Filter Box*/
+    .state-filter-dropdown {
+       display: none;
+    }
+
+    select {
+        width: 140px;
+        margin-left: 0!important;
+        margin-right: 5px;
+        padding: 2px !important;
+    }
+
+    #state-box p {
+        display: none;
+    }
+    /*Location=State Filter Box ends*/
+
+    /*Expandable Show Template*/
+    .expandableShow .expandableButton {
+        display: block !important;
+        margin-top: 10px !important;
+        margin-bottom: 0 !important;
+    }
+    .expandableShow .expandableButton button {
+        padding: 0 1rem !important;
+    }
+
+    /*negative offer*/
+    .negative-offers-wrapper .card-body {
+        padding-bottom: 0 !important;
+    }
+
+    /*Chart Break*/
+    .chart-break-container, .bg-light {
+        padding: .5rem;
+    }
+    .chart-break-wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /*Globile Mobile CSS*/
+    .globalChartMobile {
+        display: block;
+    }
+    .globalChartDesktop {
+        display: none;
+    }
+    .condensedMobile .globalChartMobile .rank-count {
+        margin-bottom: 0 !important;
+        font-size: 14px;
+        font-weight: 600;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+    }
+    .condensedMobile .globalChartMobile #chartCardBottom .rank-ribbon-container {
+        display: none;
+    }
+    .condensedMobile .globalChartMobile .product-count {
+        font-size: 18px !important;
+    }
+    .condensedMobile .globalChartMobile #chartCard1 .rank-count {
+        top: 15px !important;
+    }
+    .condensedMobile .globalChartMobile .chart-card-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+    }
+    .condensedMobile .globalChartMobile .product-start {
+        flex: 0 0 60%;
+        max-width: 60%;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        min-height: 115px;
+        padding-left: 0;
+        border-right: 1px solid rgba(0,0,0,.75);
+    }
+    .condensedMobile .globalChartMobile #chartCard1 .product-start {
+        margin-top: 1.75rem !important;
+    }
+    .condensedMobile .globalChartMobile .product-pricing {
+        flex: 0 0 40%;
+        max-width: 40%;
+        justify-content: center;
+        align-items: center;
+    }
+    .condensedMobile .globalChartMobile .rating-wrapper, .condensedMobile .globalChartMobile .product-image {
+        position: static;
+        transform: none !important;
+        width: 125px;
+    }
+    .condensedMobile .globalChartMobile .product-image {
+        margin-left: 0 !important;
+    }
+    .condensedMobile .globalChartMobile .rating-wrapper {
+        width: fit-content;
+        padding-top: .5rem !important;
+    }
+    .condensedMobile .globalChartMobile .product-start .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0 !important;
+    }
+    .condensedMobile .globalChartMobile #chartCard1 .product-start .card-body {
+        padding-top: 0 !important;
+    }
+    .condensedMobile .globalChartMobile .product-pricing .card-body {
+        margin-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .condensedMobile .globalChartMobile .btn-view-plan {
+        font-size: 14px;
+        padding: .5rem 1rem !important;
+    }
+    .condensedMobile .globalChartMobile .mobile-headline, .condensedMobile .globalChartMobile .topPromoLine {
+        text-align: center;
+        font-size: 12px;
+        padding: 0 .25rem;
+        margin-bottom: 0 !important;
+    }
+    .condensedMobile .globalChartMobile .topPromoLine {
+        padding: 0 .5rem;
+    }
+
+    /*financial chart*/
+    .simplifiedChartMobile p.vendorCardBadge {
+        font-size: 12px;
+        color: #0A3773;
+        background-color: transparent;
+        border-radius: 0;
+        width: fit-content;
+        text-indent: -1.25rem;
+        padding-left: 1rem;
+        grid-area: vendorCardBadge;
+        margin-bottom: 0;
+    }
+    .simplifiedChartMobile p.vendorCardBadge::before {
+        color: #09BCBE;
+    }
+    .financial-chart .top-choices .product-details {
+        padding-bottom: 1rem;
+    }
+    /*Secondary Chart*/
+    .global-chart .top-choices.second-chart-card .card .product-image {
+        transform: translate(-50%, 20%);
+    }
+    .second-chart-title {
+        font-size: 22px;
+    }
+    .second-chart-tagline {
+        font-size: 14px;
+    }
+    .second-chart-disclaim-container {
+        margin: 1rem auto ;
+    }
+    .second-chart-disclaim-container a {
+        font-size: 14px;
+    }
+    .global-chart .second-chart-card .promoBullets {
+        display: none;
+    }
+    .global-chart .second-chart-card .product-image {
+        margin-left: 0 !important;
+    }
+    .global-chart.logooffer-stacked .second-chart-card .rating-wrapper {
+        position: absolute !important;
+        transform: translate(-30px, 20px) !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .globalChartMobile {
+        display: none;
+    }
+    .globalChartDesktop {
+        display: block;
+    }
+    /*New layout */
+    .new-layout .product-start.col-md-4.col-lg-4 {
+        position: static;
+    }
+
+    .new-layout.container.card > .row {
+        align-items: center;
+        position: static;
+    }
+
+    .top-choices .card.new-layout .product-start button.btn.btn-link {
+        color: #09bcbe;
+        text-decoration: none;
+    }
+    /*New layout end*/
+
+    .product-start .card-body {
+        position: relative;
+        height: 100%;
+    }
+    .global-chart .top-choices:has(.vendor-review-platform-wrapper) .product-start .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .product-pricing .card-body, .product-details .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-pricing .card-body {
+        align-items: center;
+    }
+    .product-details .card-body {
+        align-items: flex-start;
+        padding-top: 2rem;
+    }
+    .product-pricing .top-choice-wrapper {
+        margin-top: -15px;
+        margin-bottom: 0;
+    }
+    /*Chart Card Hover Effect*/
+    .global-chart .top-choices .card:hover {
+        box-shadow: 0 0 18px 5px rgba(0, 0, 0, .5);
+        width: 101%;
+        position: relative;
+        left: -5px;
+        padding: 0 20px
+    }
+    /*Second Chart Card*/
+    .second-chart .top-choices .product-start .card-body {
+        display: block;
+    }
+    .second-chart .top-choices .product-start {
+        padding-left: 0 !important;
+    }
+}
+
+/*Devices: Tablet, Tablet_1024, and desktop*/
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .btn-view-plan {
+        font-size: 17px;
+        font-weight: bold;
+        width: 100%;
+        padding: 8px 30px !important;
+    }
+
+    .btn-offer-call {
+        display: inline-block;
+        width: auto;
+        font-size: 17px;
+        font-weight: bold;
+        padding: 3px 41px !important;
+    }
+    .product-details .card-body {
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+    }
+    .product-pricing .card-body {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+/*Devices >992px aka Tablet & iPad*/
+@media (max-width: 991px) {
+    .single-des-rt-blk {
+        display: flex;
+        width: 100%;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-bottom: 15px;
+    }
+
+    .single-des-rt-blk .main-btn a {
+        margin-bottom: 0;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .single-des-rt-blk > div {
+        margin-bottom: 0;
+    }
+
+    .single-des-rt-blk > .main-btn {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+
+    .single-des-rt-blk > .btn-phone > span {
+        max-height: 15px;
+        bottom: -20px;
+        font-size: 14px;
+        justify-content: center;
+        top: auto;
+    }
+
+    .single-des-rt-blk > .btn-phone > a {
+        min-height: 48px;
+        font-size: 24px;
+    }
+
+    .single-des-rt-blk > .btn-phone {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    .single-des-rt-blk {
+        padding-bottom: 25px;
+    }
+    .top-choices .card-body {
+        width: 100%;
+    }
+/*P1 Under Card*/
+    .under-card {
+        padding: .5rem 0;
+    }
+}
+
+/* For Devices >=768 - Tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    /*vendor logo*/
+    .card-body .product-image {
+        width: 160px;
+    }
+
+    .rating-line {
+        font-weight: 500;
+        font-size: 10px;
+    }
+
+    .card .ribbon-wrapper span.ribbon {
+        left: -12px;
+        top: -5px;
+    }
+
+    .products, body:has(.home-image.services-icon) .products {
+        margin-top: -55px;
+    }
+
+    .products.moveUp {
+        margin-top: -80px;
+    }
+
+    .card-header p {
+        font-size: 12px;
+    }
+
+    .top-choices .card .product-details-list li {
+        font-size: 12.5px;
+        margin-bottom: 14px;
+    }
+
+    .product-count {
+        font-size: 20pt;
+    }
+
+    .card-body {
+        padding-bottom: 5px;
+    }
+
+    .reviews-section .card-body {
+        padding-right: 5px !important;
+    }
+
+    .product-pricing .top-choice-wrapper {
+        margin-bottom: 0.25rem;
+        margin-top: -15px;
+    }
+
+    .product-pricing .card-body {
+        padding-top: 0;
+    }
+
+    a.btn.btn-link {
+        font-size: 12px;
+    }
+
+    /*Grid Adjustments - Start*/
+    .product-start.col-md-4.col-lg-4 {
+        max-width: 27%;
+        -ms-flex: 0 0 27%;
+        flex: 0 0 27%;
+    }
+
+    .product-details.col-lg-5 {
+        -ms-flex: 0 0 47%;
+        flex: 0 0 47%;
+        max-width: 47%;
+    }
+
+    .product-pricing.col-lg-3 {
+        -ms-flex: 0 0 26%;
+        flex: 0 0 26%;
+        max-width: 26%;
+        padding-left: 0;
+    }
+    /*Grid Adjustments - Ends*/
+
+}
+
+/* Tablet_1024 */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    /*vendor logo*/
+    .card-body .product-image {
+        width: 160px;
+    }
+    .rating-line {
+        font-weight: 500;
+        font-size: 10px;
+    }
+    .products, body:has(.home-image.services-icon) .products {
+        margin-top: -75px;
+    }
+    .products.moveUp {
+        margin-top: -50px;
+    }
+    .card-header p {
+        font-size: 14px;
+    }
+    .card-header {
+        padding: .5rem .5rem .75rem .5rem;
+    }
+    .product-count {
+        font-size: 18px;
+    }
+    .product-pricing .top-choice-wrapper {
+        font-size: 12px;
+        padding-left: 1.5rem !important;
+    }
+    .product-pricing {
+        padding-left: 0 !important;
+    }
+}
+
+/*Devices Tablet_1024 and Desktop*/
+@media screen and (min-width: 992px) {
+    /*First section of vendor card*/
+    .product-start.col-md-4.col-lg-4 {
+        max-width: 27%;
+        -ms-flex: 0 0 27%;
+        flex: 0 0 27%;
+    }
+
+    .product-details.col-lg-5 {
+        -ms-flex: 0 0 48%;
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+    .under-card {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1250px) {
+    .top-choices .card .product-details-list li {
+        font-size: 13px;
+        margin-bottom: 14px;
+    }
+}
+
+/*Tablet_1024*/
+@media (max-width: 1199px) {
+    .btn-phone {
+        position: relative;
+    }
+
+    .btn-phone > span {
+        display: inline-flex;
+        position: absolute;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        bottom: -20px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 12px;
+        color: #484848;
+    }
+
+    .single-des-rt-blk .phone-inner-button .big-info {
+        display: none;
+    }
+
+    .single-des-rt-blk .btn-phone > a.phone-inner-button {
+        font-weight: bold;
+    }
+
+    .single-des-rt-blk .phone-inner-button .small-info {
+        display: inline-flex;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    /*vendor logo*/
+    .card-body .product-image {
+        width: 165px;
+    }
+
+    .card-body {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+    .top-choices:has(.ribbon-wrapper) .product-start .card-body {
+        padding-top: 1rem;
+    }
+
+    #rating-popup {
+        transition: all 0.3s ease;
+    }
+
+    .top-choices .card .product-details-list li {
+        text-indent: -1.25rem;
+        font-size: 15px;
+    }
+
+    .updated_site_layout .top-choices .card .product-details-list li {
+        margin-bottom: 12px !important;
+    }
+
+    .product-start.col-md-4.col-lg-4 {
+        max-width: 30%;
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+    }
+
+    .product-details.col-lg-5 {
+        -ms-flex: 0 0 44%;
+        flex: 0 0 44%;
+        max-width: 44%;
+    }
+
+    /*Second Chart*/
+    /*Grid Adjustments - Start*/
+    .second-chart .top-choices .product-start.col-md-4.col-lg-4 {
+        max-width: 22%;
+        -ms-flex: 0 0 22%;
+        flex: 0 0 22%;
+    }
+
+    .second-chart .top-choices .product-details.col-lg-5 {
+        -ms-flex: 0 0 53%;
+        flex: 0 0 53%;
+        max-width: 53%;
+        padding-right: 1rem;
+    }
+
+    .second-chart .top-choices .product-pricing.col-lg-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding-left: 0;
+    }
+    .second-chart .top-choices .product-pricing .card-body {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .simplifiedChartMobile .second-chart .top-choices .product-pricing.col-lg-3 {
+        -ms-flex: 0 0 22%;
+        flex: 0 0 22%;
+        max-width: 22%;
+        padding-left: 0;
+    }
+    /*Grid Adjustments - Ends*/
+}
+
+@media screen and (max-width: 1250px) {
+    .btn-offer-call .call-no-desk {
+        display: none;
+    }
+
+    .call-btn .call-no, .call-btn .call-text {
+        display: inline-block;
+    }
+
+    .call-btn .call-no {
+        display: inline-block;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 1250px) {
+    .btn-view-plan {
+        font-size: 19px;
+        font-weight: bold;
+        width: 100%;
+    }
+
+    .btn-offer-call {
+        padding: .5rem 2rem !important;
+    }
+}

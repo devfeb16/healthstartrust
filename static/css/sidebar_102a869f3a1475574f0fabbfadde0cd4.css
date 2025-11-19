@@ -1,0 +1,318 @@
+.sidebar-right .card {
+    box-shadow: 5.13px 3.63px 27px 0px rgba(192, 221, 238, .5);
+}
+
+.sidebar-section-title {
+    font-weight: 700;
+    font-size: 20px;
+    color: #062B55;
+    line-height: 1.2;
+}
+.sidebar-right .card hr.my-4 {
+    margin-top: .75rem !important;
+    margin-bottom: .75rem !important;
+}
+
+.sidebar-section-title, .sidebar-section-title.two {
+    margin-bottom: .25rem;
+}
+
+.user-count-amount {
+    margin-bottom: .5rem;
+}
+
+/*No of visits section*/
+.user-count-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.user-count-text p {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.sidebar-section-title.user-count-amount {
+    font-weight: 700;
+    font-size: 20px;
+    color: #062B55;
+    margin-bottom: .25rem;
+}
+
+.user-count-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #d1f2f2;
+    border-radius: 50%;
+}
+
+.user-count-image {
+    width: 38px;
+    height: auto;
+    margin: .75rem;
+}
+
+.sidebar-list-title {
+    font-weight: 500;
+    font-size: 16px;
+    color: #062B55;
+}
+
+.sidebar-list-desc {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.articles-side-mod .sidebar-list-title, .editorial-name {
+    color: #062B55;
+    font-weight: 500;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 0;
+}
+
+.editorial-image.one {
+    margin-top: 9px;
+}
+
+/*links in Editorial section*/
+.lm-link {
+    color: #09BCBE;
+    font-size: 14px;
+    text-decoration: none;
+}
+.lm-link:hover {
+    text-decoration: underline;
+}
+/*How we rank section*/
+.f-14 {
+    font-size: 14px;
+}
+
+.how-rank-top {
+    font-size: 14px;
+    margin-bottom: .75rem;
+}
+
+.how-rank-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.how-rank-bottom button {
+    width: 100%;
+    flex: 0 0 66%;
+}
+
+.how-rank-bottom svg {
+    width: 100%;
+    flex: 0 0 33%;
+    padding-right: 1rem;
+}
+
+/*Compare Section*/
+.why-us-icon {
+    width: auto;
+    height: 36px;
+    align-self: center;
+}
+.why-compare-side-mod .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 0;
+}
+.why-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+.why-compare-side-mod .card-body .sidebar-list-title, .why-compare-side-mod .card-body .sidebar-list-desc {
+    margin-bottom: 0;
+}
+.why-compare-side-mod .card-body .sidebar-list-title {
+    width: 100%;
+}
+.why-compare-side-mod .card-body .sidebar-list-desc {
+    padding-top: .25rem !important;
+}
+
+/**/
+.sidebar-vendor {
+    width: 100%;
+    height: fit-content;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.img-resize {
+    width: 100%;
+    height: auto;
+}
+
+/*No Image Sidebar Articles*/
+.article-side-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-left: 1rem;
+    width: 100%;
+}
+.article-side-list {
+    margin-bottom: .75rem;
+}
+
+.article-side-list p {
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.reviews-side-box {
+    align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+    .how-rank-title-box h2 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .how-rank-top {
+        font-size: 14px;
+    }
+    .hwr-mobile-mod {
+        padding-bottom: 1rem;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .how-rank-title-box h2 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .how-rank-top {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    /*How We Rank Mobile*/
+    .how-rank-mobile {
+        display: block;
+        padding: 0 1rem !important;
+    }
+    .how-rank-title-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0 !important;
+    }
+    .rank-img {
+        width: 50px;
+        margin-right: 1rem;
+    }
+    .how-rank-title-box p.home-section-title {
+        margin: 0 !important;
+    }
+    .how-rank-top {
+        text-align: center;
+        margin-bottom: .5rem !important;
+    }
+    .how-rank-bottom button {
+        font-size: 16px;
+        margin: 0 !important;
+        width: 100%;
+        border: none;
+        text-decoration: underline;
+        padding: 0 !important;
+    }
+    .how-rank-bottom button:hover {
+        color: #e4405f;
+        text-decoration: underline;
+        background-color: #FFFFFF;
+    }
+    .home-section-title {
+        margin-bottom: 1rem !important;
+    }
+    .how-rank-mobile .how-rank-bottom {
+        justify-content: center !important;
+    }
+    .how-rank-mobile .how-rank-bottom .btn-outline-danger {
+        text-align: center !important;
+        font-size: 16px !important;
+        width: 100%
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /*Debt Sidebar visitor count*/
+    .users-counter {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 5px;
+        margin-bottom: 0;
+    }
+    .users-counter p {
+        margin-bottom: 0;
+    }
+    .users-counter .visitor-count {
+        font-weight: 600;
+    }
+    .users-counter .visitor-msg {
+        font-weight: 400;
+    }
+    .users-counter img {
+        width: 50px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    /*How We Rank Mobile*/
+    .how-rank-mobile {
+        display: none;
+    }
+}
+
+/* Tablet_1024 */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .sidebar-section-title.one, .sidebar-section-title.two, .user-count-amount, .sidebar-section-title.same, .sidebar-section-title.user-count-amount {
+        font-size: 14px;
+    }
+    .icon-wrapper {
+        width: 46px;
+        height: 44px;
+    }
+    .sidebar-list-title, .editorial-name, .sidebar-list-desc, .editorial-name, .lm-link, .how-rank-top  {
+        font-size: 12px;
+    }
+    .editorial-name, .lm-link  {
+        margin-left: -4px;
+    }
+    .rank-img, .user-count-icon {
+        display: none;
+    }
+    .sidebar-vendor {
+        width: fit-content;
+        height: auto;
+    }
+/*articles sidebar no image*/
+    .article-side-list p {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .article-side-list .lm-link {
+        margin-left: 0;
+    }
+
+}

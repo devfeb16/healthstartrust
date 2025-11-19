@@ -1,0 +1,458 @@
+/*Rating containers*/
+.rating-wrapper {
+    padding-left: 0;
+    margin-top: 1.2rem;
+    display: grid;
+    grid-template-columns: max-content;
+    grid-area: ratingWrapper;
+}
+/*Rating containers end*/
+
+/*Rating Score*/
+.rating-pt {
+    font-size: 36px;
+    font-family: 'MontBold', sans-serif;
+    color: #000;
+    grid-area: score;
+}
+.top-choices:has(.word-score-container) .rating-pt {
+    font-size: 40px;
+}
+
+/*Stars*/
+.star-rating-wrapper {
+    position: relative;
+    grid-area: stars;
+}
+
+.rating-list, .rating-list-background {
+    list-style-type: none;
+    white-space: nowrap;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.rating-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.rating-list li, .rating-list-background li {
+    display: inline-block;
+}
+
+.rating-list li > i, .rating-list-background li > i {
+    letter-spacing: -3px;
+    width: fit-content;
+}
+
+.rating-list li > i {
+    color: #F3B42C;
+}
+
+.rating-list-background li > i {
+    color: #e5e5e5;
+}
+/*Stars ends*/
+
+/*Trophy Icon*/
+.trophy-score {
+    grid-area: trophyIcon;
+    display: none;
+}
+
+#chartCard1 .trophy-score, #chartCardBottom .trophy-score {
+    display: block;
+}
+
+/*Word Score*/
+.word-score-container {
+   grid-area: wordScore;
+    width: 100%;
+}
+
+.word-score {
+    font-size: 16px;
+    text-align: right;
+    font-weight: 700;
+    color: #484848;
+    margin-bottom: 0;
+}
+
+.simplifiedChartMobile .word-score {
+    text-align: left;
+}
+
+/*Circle Rating*/
+.rating-in-circle {
+    width: 75px;
+    height: 75px;
+}
+
+.circle-rate .rating-pt {
+    position: relative;
+}
+
+.rating-number-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+}
+
+/*Review Index and Articles*/
+.reviews-section .star-rating-wrapper {
+    margin-top: .25rem;
+    margin-bottom: .5rem;
+}
+.review-details .star-rating-wrapper {
+    width: fit-content;
+    margin: 0 auto;
+}
+/*negative offer card*/
+.negative-offers-wrapper .rating-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .rating-wrapper {
+        grid-column-gap: 0;
+        grid-template-rows: 1fr .6fr;
+        grid-template-columns: 1fr;
+        align-items: center;
+        grid-template-areas:
+        "score"
+        "stars";
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-30px, 20px);
+        margin-top: 0;
+        padding: 0;
+    }
+    .condensedMobile .word-score {
+        text-align: left;
+    }
+    #chartCard1 .rating-wrapper, #chartCardBottom .rating-wrapper {
+        transform: translate(-30px, 25px);
+    }
+    #chartCard1:has(.word-score-container) .rating-wrapper,#chartCardBottom:has(.word-score-container) .rating-wrapper {
+        transform: translate(-30px, 15px);
+    }
+    .top-choices:has(.word-score-container) .rating-wrapper {
+        transform: translate(-30px, 15px);
+        grid-template-columns: 1fr;
+        grid-template-rows: 20px 15px 15px;
+        grid-template-areas:
+        "score"
+        "wordScore"
+        "stars";
+    }
+    .top-choices:has(.word-score-container):has(.trophy-icon) .rating-wrapper {
+      transform: translate(-30px, 15px);
+      grid-template-rows: 20px 15px 15px;
+      grid-template-areas:
+        "score score"
+        "wordScore wordScore"
+        "stars stars";
+  }
+    #chartCard1:has(.word-score-container):has(.trophy-icon) .rating-wrapper, #chartCardBottom:has(.word-score-container):has(.trophy-icon) .rating-wrapper {
+        transform: translate(-30px, 20px);
+        grid-template-columns: .65fr .35fr;
+        grid-template-rows: 20px 15px 15px;
+        grid-template-areas:
+        "score trophyIcon"
+        "wordScore wordScore"
+        "stars stars";
+    }
+    .top-choices:has(.trophy-icon) .rating-wrapper {
+        grid-template-rows: 20px 20px;
+        grid-template-areas:
+        "score score"
+        "stars stars";
+    }
+    #chartCard1:has(.trophy-icon) .rating-wrapper, #chartCardBottom:has(.trophy-icon) .rating-wrapper {
+        grid-template-columns: .65fr .35fr;
+        grid-template-rows: 20px 20px;
+        grid-template-areas:
+        "score trophyIcon"
+        "stars stars";
+    }
+    /*stars*/
+    .star-rating-wrapper {
+        line-height: 16px;
+        justify-self: center;
+    }
+
+    .rating-list-background, .rating-list {
+        margin: 0 5px 0 0;
+    }
+    .rating-list li > i, .rating-list-background li > i {
+        font-size: 12px;
+    }
+
+    /*Rating Score*/
+    .rating-pt, .top-choices:has(.word-score-container) .rating-pt, .top-choices:has(.trophy-score) .rating-pt .top-choices:has(.word-score-container, .trophy-score) .rating-pt {
+        font-size: 24px;
+        line-height: 24px;
+    }
+    .trophy-score {
+        width: 16px;
+    }
+    .trophy-icon {
+        height: auto;
+        margin-left: 0;
+    }
+    /*Word Score*/
+    .word-score, .simplifiedChartMobile .word-score {
+        text-align: center;
+        font-size: 14px;
+        line-height: 1;
+    }
+
+    /*Circle Rating*/
+    .rating-in-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .rating-number-circle {
+        font-size: 24px;
+    }
+    /*Financial Templates*/
+    .simplifiedChartMobile .top-choices .rating-wrapper, .simplifiedChartMobile #chartCard1 .rating-wrapper {
+        position: static;
+        transform: none !important;
+        margin-bottom: .25rem;
+    }
+    .simplifiedChartMobile .rating-wrapper, .simplifiedChartMobile .top-choices:has(.trophy-score) .rating-wrapper, .simplifiedChartMobile #chartCard1:has(.trophy-score) .rating-wrapper, .simplifiedChartMobile #chartCard1:has(.word-score-container):has(.trophy-score) .rating-wrapper, .simplifiedChartMobile .top-choices:has(.word-score-container) .rating-wrapper, .simplifiedChartMobile .top-choices:has(.word-score-container):has(.trophy-score) .rating-wrapper {
+        transform: none !important;
+    }
+
+    .simplifiedChartMobile .rating-list-background, .simplifiedChartMobile .rating-list {
+        margin: 0 3px 0 0 !important;
+    }
+
+    .simplifiedChartMobile .rating-pt {
+        padding-left: 0;
+        padding-top: 0;
+        position: static;
+        text-align: center;
+        font-size: 28px;
+        line-height: 1;
+    }
+    .simplifiedChartMobile #chartCard1:has(.trophy-score) .rating-pt, .simplifiedChartMobile #chartCardBottom:has(.trophy-score) .rating-pt {
+        justify-self: flex-end;
+        margin-right: .25rem;
+    }
+
+    /*Mortgages Template*/
+    .mortgage-index.simplifiedChartMobile .rating-pt, .condensedMobile .globalChartMobile .rating-pt {
+        font-size: 24px;
+    }
+    .mortgage-index.simplifiedChartMobile .top-choices .rating-wrapper, .mortgage-index.simplifiedChartMobile .top-choices:has(.trophy-score) .rating-wrapper, .condensedMobile .globalChartMobile .top-choices .rating-wrapper, .condensedMobile .globalChartMobile .top-choices:has(.trophy-score) .rating-wrapper {
+        grid-template-rows: 20px;
+        grid-template-areas: "score stars";
+        padding-top: 1rem
+    }
+    .mortgage-index.simplifiedChartMobile .top-choices:has(.word-score-container) .rating-wrapper, .condensedMobile .globalChartMobile .top-choices:has(.word-score-container) .rating-wrapper {
+        grid-template-rows: 15px 20px;
+        grid-template-areas:
+            "score wordScore"
+            "score stars";
+        padding-top: 1rem;
+    }
+     .mortgage-index.simplifiedChartMobile #chartCard1:has(.word-score-container):has(.trophy-score) .rating-wrapper, .mortgage-index.simplifiedChartMobile #chartCardBottom:has(.word-score-container):has(.trophy-score) .rating-wrapper, .condensedMobile .globalChartMobile #chartCard1:has(.word-score-container):has(.trophy-score) .rating-wrapper, .condensedMobile .globalChartMobile #chartCardBottom:has(.word-score-container):has(.trophy-score) .rating-wrapper {
+        grid-template-rows: 15px 20px;
+        grid-template-areas:
+            "trophyIcon score wordScore"
+            "trophyIcon score stars";
+        padding-top: 1rem;
+    }
+    .mortgage-index.simplifiedChartMobile #chartCard1:has(.trophy-score) .rating-wrapper, .mortgage-index.simplifiedChartMobile #chartCardBottom:has(.trophy-score) .rating-wrapper, .condensedMobile .globalChartMobile #chartCard1:has(.trophy-score) .rating-wrapper, .condensedMobile .globalChartMobile #chartCardBottom:has(.trophy-score) .rating-wrapper {
+        grid-template-rows: 20px;
+        grid-template-areas:
+            "trophyIcon score stars";
+        padding-top: 1rem;
+    }
+    .mortgage-index.simplifiedChartMobile .top-choices:has(.word-score-container) .rating-pt, .mortgage-index.simplifiedChartMobile .top-choices:has(.word-score-container):has(.trophy-score) .rating-pt, .condensedMobile .globalChartMobile .top-choices:has(.word-score-container) .rating-pt, .condensedMobile .globalChartMobile .top-choices:has(.word-score-container):has(.trophy-score) .rating-pt {
+        font-size: 30px;
+        padding-right: .5rem;
+    }
+    .mortgage-index.simplifiedChartMobile .top-choices:has(.trophy-score) .rating-pt, .condensedMobile .globalChartMobile .top-choices:has(.trophy-score) .rating-pt {
+        font-size: 24px;
+        padding: 0 .25rem;
+    }
+    .mortgage-index.simplifiedChartMobile .top-choices:has(.word-score-container) .star-rating-wrapper li {
+        font-size: 11px !important;
+        line-height: 1;
+    }
+    .mortgage-index .star-rating-wrapper {
+        justify-self: flex-start;
+    }
+    .mortgage-index .word-score {
+        text-align: left;
+        font-size: 12px;
+        line-height: 2px;
+        padding-bottom: 0;
+        padding-top: 6px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .new-layout .stars-wrapper {
+        position: absolute;
+        top: 87px;
+        right: 100px;
+    }
+
+    .rating-wrapper {
+        margin-bottom: 1rem;
+        grid-column-gap: .5rem;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        align-items: center;
+        grid-template-areas:
+        "stars score";
+    }
+    .simplifiedChartMobile .rating-wrapper {
+        grid-template-columns: .55fr 1fr;
+    }
+    .top-choices:has(.hover-rating-container) .rating-wrapper {
+        position: relative;
+        width: 100%;
+    }
+    .top-choices:has(.word-score-container) .rating-wrapper {
+        grid-template-rows: 20px 15px;
+        grid-template-areas:
+        "wordScore score"
+        "stars score";
+    }
+    .trophy-score {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .star-rating-wrapper {
+        justify-self: start;
+    }
+
+    /*Financial Templates*/
+    .simplifiedChartMobile .trophy-score {
+        position: static;
+    }
+    .simplifiedChartMobile .rating-wrapper {
+        grid-column-gap: 0;
+        grid-template-areas: "score stars";
+        align-self: center;
+        justify-self: start;
+    }
+    .simplifiedChartMobile .top-choices:has(.inChart-reviewCount-container) .rating-wrapper {
+        justify-self: center;
+        margin-bottom: 0 !important;
+        align-self: end;
+    }
+    .simplifiedChartMobile .top-choices:has(.word-score-container) .rating-wrapper, .simplifiedChartMobile .top-choices:has(.word-score-container):has(.trophy-score) .rating-wrapper {
+        grid-template-rows: 20px 15px;
+        grid-template-areas:
+        "score wordScore"
+        "score stars";
+    }
+    .simplifiedChartMobile #chartCard1:has(.word-score-container):has(.trophy-score) .rating-wrapper, .simplifiedChartMobile #chartCardBottom:has(.word-score-container):has(.trophy-score) .rating-wrapper {
+        grid-template-rows: 20px 15px;
+        grid-template-areas:
+        "trophyIcon score wordScore"
+        "trophyIcon score stars";
+    }
+    .simplifiedChartMobile .top-choices:has(.trophy-score) .rating-wrapper {
+        grid-template-areas: "score stars";
+    }
+    .simplifiedChartMobile #chartCard1:has(.trophy-score) .rating-wrapper, .simplifiedChartMobile #chartCardBottom:has(.trophy-score) .rating-wrapper{
+        grid-template-rows: 20px;
+        grid-template-areas:
+        "trophyIcon score stars";
+    }
+
+    .simplifiedChartMobile .rating-pt {
+        justify-self: end;
+        font-size: 36px;
+        margin-right: .25rem;
+        line-height: 1;
+    }
+
+    /*Trophy Icon*/
+    .simplifiedChartMobile .trophy-score {
+        width: 22px;
+        margin-right: .25rem;
+    }
+    .simplifiedChartMobile .rating-list, .simplifiedChartMobile .rating-list-background {
+        font-size: 16px;
+    }
+    /* Second Chart */
+    .simplifiedChartMobile .second-chart .rating-wrapper {
+        grid-column-gap: 10px !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    /*rating stars & score*/
+    .rating-wrapper {
+        margin-bottom: 0.25rem;
+        margin-top: 0;
+    }
+
+    .rating-pt {
+        font-size: 32px;
+        margin-left: 0;
+        padding: 0;
+    }
+    .trophy-score {
+        width: 18px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .rating-wrapper {
+        margin-top: 0;
+        margin-bottom: .25rem;
+    }
+    .top-choices:has(.word-score-container) .rating-wrapper {
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    /*vendor stars and score*/
+    .rating-wrapper {
+        padding-left: 0 !important;
+    }
+    .rating-pt {
+        font-size: 32px;
+    }
+    .trophy-score {
+        width: 14px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    /*Trophy Icon*/
+    .trophy-icon {
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .trophy-score {
+        width: 22px;
+    }
+    .top-choices:has(.word-score-container):has(.btn-offer-call) .rating-wrapper {
+        margin-top: .5rem;
+    }
+}

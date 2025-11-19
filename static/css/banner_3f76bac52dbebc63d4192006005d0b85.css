@@ -1,0 +1,402 @@
+.home-title, .home-subtitle, .service-title, .badge, .badge span {
+    font-family: Poppins, sans-serif;
+    color: #FFFFFF;
+}
+.home-image {
+    background-size: cover;
+    min-height: fit-content;
+    padding-top: 1rem;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.home-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+.terms-section .home-title, .privacy-section .home-title {
+    padding: 1rem;
+    width: 100%;
+}
+
+.home-subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: .5rem;
+    line-height: 1.5;
+}
+
+/*services-list = icons and tagline*/
+.services-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.services-list li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.services-list li img {
+    width: 46px;
+    height: 38px;
+}
+
+.service-title {
+    font-size: 24px;
+    padding-left: 15px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+/*Badge = the last updated tag in banner*/
+.badge {
+    background-color: #707070;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+/* Review, Contact, Article, Review Detail, Article Detail, Terms, Editors Pages*/
+.contact-section .home-title {
+    margin-top: 0;
+}
+
+.contact-section .services-list, .contact-section p.badge, .reviews-section .services-list,
+.articles-section .services-list, .article-details .services-list, .review-details .services-list, .terms-section .services-list, .privacy-section .services-list {
+    display: none;
+}
+
+.privacy-section .badge, .terms-section .badge {
+    margin-top: 0 !important;
+    display: none;
+}
+
+.reviews-section .badge, .articles-section .badge {
+    margin-top: .5rem;
+}
+
+/*Hero-Area-Two*/
+.home-image-two {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+.banner-image-two {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+.banner-content-container {
+    padding: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.banner-content-wrapper {
+    padding: 2rem 1rem;
+}
+
+/* Mobile Version - For Small Devices <=576 */
+@media only screen and (max-width: 576px) {
+    .home-image {
+        padding-bottom: 2rem !important;
+    }
+    .home-title {
+        font-size: 18px;
+        width: 240px;
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+    .home-subtitle {
+        font-size: 10px;
+        font-weight: 500;
+        display: none;
+    }
+    .services-list {
+        display: none;
+    }
+    .badge {
+        background: transparent;
+        font-size: 10px;
+        font-weight: 400;
+        padding: 0 !important;
+    }
+    .badge span {
+        font-weight: 400;
+    }
+    .terms-section .home-image, .privacy-section .home-image {
+        height: 85px;
+    }
+    .reviews-section .home-title, .articles-section .home-title, .article-details .home-title, .review-details .home-title, .contact-section .home-title {
+        margin-top: 0;
+        width: 250px;
+    }
+    .simplifiedChartMobile .home-image {
+        height: 130px;
+        padding: 0 10px;
+    }
+    .simplifiedChartMobile .home-title {
+        font-size: 24px;
+        width: 100%;
+        text-align: center;
+    }
+    .simplifiedChartMobile .badge {
+        display: block;
+        margin: 0 0 10px 0 !important;
+        background: transparent;
+        color: #000000;
+        text-align: center;
+    }
+    .simplifiedChartMobile .carousel-products {
+        margin-top: -25px !important;
+    }
+}
+
+/*Devices: Horizontal mobile, tablet, table_1024*/
+@media screen and (min-width: 576px) and (max-width: 1199px) {
+    /*content container that overlaps the with banner*/
+    .contact-section .products, .reviews-section .products, .articles-section .products {
+        margin-top: -30px;
+    }
+    .review-details .home-image {
+        height: 220px;
+    }
+    .review-details .products {
+        margin-top: -60px;
+    }
+}
+
+/* For Devices <768 - Few elements share same functionality in Small and Medium Devices */
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+    .contact-section .home-title, .reviews-section .home-title, .articles-section .home-title {
+        width: 375px;
+        padding-left: 0;
+    }
+    .contact-section .home-subtitle, .reviews-section .home-subtitle,.articles-section .home-subtitle {
+        display: none;
+    }
+
+    .reviews-section .badge, .articles-section .badge {
+        margin-top: 0 !important;
+    }
+    .home-title {
+        font-size: 24px;
+        width: 330px;
+    }
+    .home-subtitle {
+        font-size: 13px;
+        width: 310px;
+    }
+    .services-list {
+        display: none;
+    }
+    .badge {
+        font-size: 10px;
+        margin-top: -5px;
+        background-color: transparent;
+        padding: 0 !important;
+    }
+    .editor-subtitle {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 767px){
+    .home-image {
+        height: fit-content;
+        padding-bottom: 2rem;
+    }
+    .terms-section .home-title, .privacy-section .home-title {
+        padding: 1rem 0;
+    }
+    .home-image.services-icon {
+        padding-bottom: 3rem;
+    }
+    .home-image .col-lg-9 {
+        padding: 0 1.5rem !important;
+    }
+    /*Hero-Area-Two*/
+    .home-image-two {
+        min-height: fit-content;
+    }
+    .p-xl-5.banner-content-wrapper {
+        padding: 1rem 0 3.5rem 1.5rem !important;
+    }
+    .home-image-two .home-title {margin-top: 0;}
+}
+
+/* For Devices Tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .home-image .row .p-md-4 {
+        padding: 1rem 2rem !important;
+    }
+
+    .home-image {
+        padding-bottom: 3rem;
+        background-size: cover;
+    }
+
+    .home-image.services-icon {
+        padding-bottom: 4rem;
+    }
+
+    .reviews-section .home-image, .articles-section .home-image, .contact-section .home-image, .article-details .home-image {
+        height: 220px;
+    }
+
+    .contact-section .home-title, .reviews-section .home-title, .articles-section .home-title, .article-details .home-title, .review-details .home-title {
+        width: 420px;
+    }
+    .contact-section .home-subtitle, .reviews-section .home-subtitle, .review-details .home-subtitle, .articles-section .home-subtitle, .article-details .home-subtitle {
+        width: 440px;
+    }
+
+    .home-title {
+        font-size: 24px;
+        width: 480px;
+    }
+
+    .home-subtitle {
+        font-size: 12px;
+        width: 390px;
+    }
+
+    .service-title {
+        font-size: 14px;
+        padding-left: 11px;
+    }
+
+    .services-list {
+        margin-bottom: .5rem;
+    }
+
+    .services-list li img {
+        width: 30px;
+        height: 28px;
+        margin-bottom: 5px;
+    }
+
+    .badge {
+        font-size: 10px;
+        margin-top: -5px;
+    }
+    /*Hero Area Two*/
+    .global-chart:has(.home-image-two) .products {
+        margin-top: -25px;
+    }
+}
+
+/* Tablet_1024 */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .home-image.row.p-md-4 {
+        padding: 1rem 2rem !important;
+    }
+
+    .home-image {
+        padding-bottom: 4rem;
+    }
+
+    .home-image.services-icon {
+        padding-bottom: 4rem;
+    }
+
+    .contact-section .home-title, .reviews-section .home-title, .articles-section .home-title, .article-details .home-title, .review-details .home-title {
+        width: 540px;
+    }
+    .contact-section .home-subtitle, .reviews-section .home-subtitle, .articles-section .home-subtitle, .article-details .home-subtitle, .review-details .home-subtitle {
+        width: 560px;
+    }
+
+    .home-title {
+        font-size: 32px;
+        width: 510px;
+    }
+
+    .home-subtitle {
+        font-size: 16px;
+        width: 510px;
+    }
+
+    .service-title {
+        font-size: 14px;
+        padding-left: 11px;
+    }
+
+    .services-list li img {
+        width: 30px;
+        height: 28px;
+        margin-bottom: 5px;
+    }
+
+    .badge {
+        font-size: 10px;
+        margin-top: 0;
+    }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 1200px) {
+    .global-chart .pr-2r {
+        padding-right: 2rem;
+    }
+    .global-chart .pl-2r {
+        padding-left: 2rem;
+    }
+    .home-image {
+        height: 300px;
+        padding: 0 15px;
+    }
+    .home-image.services-icon {
+        height: 350px;
+        padding-bottom: 1rem;
+    }
+    .reviews-section .home-image, .articles-section .home-image {
+        height: 300px;
+    }
+    .contact-section .home-image, .article-details .home-image, .review-details .home-image {
+        height: 275px;
+    }
+    .review-details .products {
+        margin-top: -60px;
+    }
+    .home-title {
+        width: 700px;
+    }
+    .contact-section .home-title, .reviews-section .home-title, .articles-section .home-title {
+        width: 720px;
+    }
+    .home-subtitle {
+        width: 720px;
+    }
+    .contact-section .home-subtitle, .reviews-section .home-subtitle, .reviews-section .home-subtitle, .articles-section .home-subtitle {
+        width: 690px;
+    }
+    .services-list {
+        margin-bottom: 0 !important;
+    }
+    .badge {
+        font-size: 12px;
+        margin-top: 0;
+    }
+    body:has(.home-image.services-icon) .badge {
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+    .two-card-template .home-image {
+        height: 355px;
+        color: #fff;
+        background-size: 100% 100% !important;
+    }
+    .global-chart .home-image .row .p-xl-5, .reviews-section .home-image .p-xl-5, .articles-section .home-image .p-xl-5 {
+        padding: 2rem !important;
+    }
+    /*Hero-Area-Two*/
+    .home-image-two {
+        min-height: 300px;
+    }
+    .p-xl-5.banner-content-wrapper {
+        padding: 2rem !important;
+    }
+}
