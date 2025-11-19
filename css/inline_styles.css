@@ -98,7 +98,44 @@ td {font-weight: 400;}
 #carouselCard2 .ribbon-carousel, #carouselCard3 .ribbon-carousel {display: none;}
 
 /*Sticky Bar*/
-#Footer-section {position: relative; z-index: 99;} 
+#Footer-section {position: relative; z-index: 99;}
+
+/* Footer Logo - Text white, SVG with footer background but original colors */
+#Footer-section .custom-header-logo {
+    background-color: #062B55;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+}
+
+#Footer-section .custom-header-logo img {
+    /* Keep original colors, no filter */
+    filter: none;
+}
+
+#Footer-section .custom-header-logo-text .logo-title,
+#Footer-section .custom-header-logo-text .logo-subtitle {
+    color: #FFFFFF !important;
+}
+
+#Footer-section .vertical-logo {
+    background-color: #062B55;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Footer-section .vertical-logo img,
+#Footer-section .vertical-logo svg {
+    /* Keep original colors, no filter */
+    filter: none;
+}
+
+#Footer-section .vertical-logo svg path {
+    /* Keep original colors from SVG */
+    fill: inherit;
+} 
 .sticky-image-score-box {display: flex; flex-direction: column; align-items: center; justify-content: center; grid-area: stickyVendor;} 
 .sticky-content-box {display: flex; flex-direction: column; align-items: flex-start; justify-content: center; grid-area: stickyPromo;} 
 .sticky-module-container p {text-align: left; padding: 0 1rem; line-height: 1.2;} 
@@ -214,6 +251,11 @@ div.carousel-container {margin-top: 0 !important;}
 .chart-break-wrapper p {font-size: 16px; align-self: start !important;}
 }
 
+.bg-medical-light {
+    background-color: #f0f7f9;
+    background-image: linear-gradient(135deg, #f0f7f9 0%, #e8f4f7 100%);
+}
+
 
 
 .top-choices.bg-white .bg-light {display: none !important;} 
@@ -235,4 +277,9 @@ div.carousel-container {margin-top: 0 !important;}
 .chart-break-wrapper img {width: 200px;}
 .chart-break-wrapper h3 {font-size: 22px; padding-bottom: 0 !important;; padding-right: 1rem !important; align-self: end !important;}
 .chart-break-wrapper p {font-size: 16px; align-self: start !important;}
+}
+
+.bg-medical-light {
+    background-color: #f0f7f9;
+    background-image: linear-gradient(135deg, #f0f7f9 0%, #e8f4f7 100%);
 }

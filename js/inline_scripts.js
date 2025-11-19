@@ -31,9 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     		});
 
         $('.filter-link').each(function(){
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'state-filter');
-            }
+            // Filter link handler
         })
 
     	  $('.btn-offer-call').each(function() {
@@ -41,9 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
     	     $(this).click((e) => {
               e.preventDefault();
               e.stopPropagation();
-              gtag('event', 'call', {
-                'event_label': vendorName,
-              });
               window.open($(this).attr('href'),"_self");
     	     });
     	  });
@@ -80,19 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 e.preventDefault();
                 if(e.target.nodeName != 'BUTTON' && e.target.parentNode.nodeName != 'BUTTON') {
                   e.stopPropagation();
-                  if(typeof gtag !== 'undefined') {
-                    var label = '';
-                    if (vendorName) {
-                      label = vendorName;
-                    }
-
-                    gtag('event', 'click', {
-                      'event_category': offerLocation,
-                      'event_label': label,
-                      'value': 1,
-                    });
-
-                  }
                   window.open(target_url,"_blank");
                 }
               })
@@ -101,14 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         $('[data-toggle="popover"]').popover()
     });
-        
-
-
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '');
-        
 
 
           $(window).scroll(

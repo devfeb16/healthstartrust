@@ -1,0 +1,324 @@
+/* Custom Header Styles for HealthStarTrust.com */
+.custom-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #FFFFFF;
+    border-bottom: 5px solid #062B55;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.custom-header-wrapper {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+}
+
+.custom-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.custom-header-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.custom-header-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.custom-header-logo-text {
+    display: none;
+}
+
+.custom-header-logo-text .logo-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #062B55;
+    line-height: 1.2;
+    font-family: 'Poppins', sans-serif;
+}
+
+.custom-header-logo-text .logo-subtitle {
+    font-size: 0.75rem;
+    color: #484848;
+    line-height: 1.2;
+    font-family: 'Poppins', sans-serif;
+}
+
+.custom-header-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.custom-header-nav-links {
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-header-nav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #484848;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5rem 0;
+}
+
+.custom-header-nav-link:hover,
+.custom-header-nav-link.active {
+    color: #09BCBE;
+    text-decoration: underline;
+}
+
+.custom-header-nav-dropdown {
+    position: relative;
+}
+
+.custom-header-nav-dropdown-btn {
+    background: none;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #484848;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.custom-header-nav-dropdown-btn:hover {
+    color: #09BCBE;
+}
+
+.custom-header-nav-dropdown-btn svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.custom-header-nav-dropdown.active .custom-header-nav-dropdown-btn svg,
+.custom-header-nav-dropdown:hover .custom-header-nav-dropdown-btn svg {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.custom-header-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #FFFFFF;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    list-style: none;
+}
+
+.custom-header-nav-dropdown:hover .custom-header-dropdown-menu,
+.custom-header-nav-dropdown.active .custom-header-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.custom-header-dropdown-menu li {
+    margin: 0;
+}
+
+.custom-header-dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #484848;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-header-dropdown-menu a:hover {
+    background-color: rgba(9, 188, 190, 0.1);
+    color: #09BCBE;
+}
+
+.custom-header-mobile-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.custom-header-mobile-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    color: #484848;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-header-mobile-btn:hover {
+    background-color: rgba(9, 188, 190, 0.1);
+    color: #09BCBE;
+}
+
+.custom-header-mobile-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.custom-header-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.25rem;
+    background-color: #09BCBE;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.custom-header-contact-btn:hover {
+    background-color: #07a5a7;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Mobile Menu */
+.custom-header-mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.custom-header-mobile-menu.active {
+    display: block;
+}
+
+.custom-header-mobile-menu-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100%;
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    overflow-y: auto;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+}
+
+.custom-header-mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.custom-header-mobile-menu-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #484848;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-header-mobile-menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-header-mobile-menu-links li {
+    margin-bottom: 1rem;
+}
+
+.custom-header-mobile-menu-links a {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #484848;
+    text-decoration: none;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.custom-header-mobile-menu-links a:hover,
+.custom-header-mobile-menu-links a.active {
+    color: #09BCBE;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+    .custom-header-logo-text {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    .custom-header-nav-links {
+        display: flex;
+    }
+    
+    .custom-header-mobile-buttons {
+        display: none;
+    }
+    
+    .custom-header-contact-btn {
+        display: inline-flex;
+    }
+}
+
+@media (max-width: 767px) {
+    .custom-header-contact-btn {
+        display: none;
+    }
+}
+
