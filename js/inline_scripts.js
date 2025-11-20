@@ -117,6 +117,18 @@ document.addEventListener("DOMContentLoaded", function () {
         
 
 
+// Initialize Bootstrap modals
+$(document).ready(function() {
+    // Ensure Bootstrap modals work properly
+    $('[data-toggle="modal"]').on('click', function(e) {
+        var target = $(this).data('target');
+        if (target) {
+            $(target).modal('show');
+            e.preventDefault();
+        }
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const stickyModule = document.querySelector('.sticky-module');
     let lastScrollY = window.scrollY;
