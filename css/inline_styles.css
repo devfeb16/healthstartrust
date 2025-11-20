@@ -257,6 +257,34 @@ div.carousel-container {margin-top: 0 !important;}
     background-image: linear-gradient(135deg, #f0f7f9 0%, #e8f4f7 100%);
 }
 
+/* Enhanced styling for Reviews Available links */
+.reviews-available-enhanced {
+    color: #09BCBE !important;
+    text-decoration: underline;
+    font-weight: 600 !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.reviews-available-enhanced:hover {
+    color: #e4405f !important;
+    text-decoration: none;
+    transform: translateY(-1px);
+    font-weight: 700 !important;
+}
+
+.reviews-available-enhanced::after {
+    content: " →";
+    color: #09BCBE;
+    font-weight: normal;
+    transition: all 0.3s ease;
+}
+
+.reviews-available-enhanced:hover::after {
+    color: #e4405f;
+    transform: translateX(3px);
+}
+
 
 
 .top-choices.bg-white .bg-light {display: none !important;} 
@@ -283,4 +311,32 @@ div.carousel-container {margin-top: 0 !important;}
 .bg-medical-light {
     background-color: #f0f7f9;
     background-image: linear-gradient(135deg, #f0f7f9 0%, #e8f4f7 100%);
+}
+
+/* Enhanced styling for Reviews Available links */
+.reviews-available-enhanced {
+    color: #09BCBE !important;
+    text-decoration: underline;
+    font-weight: 600 !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.reviews-available-enhanced:hover {
+    color: #e4405f !important;
+    text-decoration: none;
+    transform: translateY(-1px);
+    font-weight: 700 !important;
+}
+
+.reviews-available-enhanced::after {
+    content: " →";
+    color: #09BCBE;
+    font-weight: normal;
+    transition: all 0.3s ease;
+}
+
+.reviews-available-enhanced:hover::after {
+    color: #e4405f;
+    transform: translateX(3px);
 }
