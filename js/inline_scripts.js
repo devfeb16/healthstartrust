@@ -48,34 +48,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     		    if (!$(this).hasClass('btn-offer-call')) {
 
-      		    const coId = $(this).attr('data-co-id');
-      		    const offerId = $(this).attr('data-offer-id');
-      		    const offerLocation = $(this).attr('data-location');
-      		    const offerPosition = $(this).attr('data-position');
-      		    const vendorName = $(this).attr('data-vendor');
-      		    const cvid = $(this).attr('data-cvid');
-
-      		    //build query string
-      		    var qs = {
-      		      url: window.location.href,
-      		      chartOfferId: coId,
-      		      offerId:offerId,
-      		      offerLocation:offerLocation,
-      		      offerPosition:offerPosition,
-      		      cvid:cvid
-      		    }
-
-      		    const target_url = '/click?' + $.param(qs);
-
-      		    if ($(this).prop("tagName") === 'A') {
-      		      $(this).attr('href',target_url)
+      		    // For static hosting, skip the click tracking and use existing href attributes
+      		    // The elements already have direct links to external sites
+      		    if ($(this).prop("tagName") === 'A' && $(this).attr('href') && !$(this).attr('href').startsWith('/click')) {
+      		      // Keep existing href - no changes needed for static deployment
       		    }
 
               $(this).click((e) => {
-                e.preventDefault();
+                // Allow default click behavior for static hosting
+                // Remove preventDefault to let direct links work
                 if(e.target.nodeName != 'BUTTON' && e.target.parentNode.nodeName != 'BUTTON') {
-                  e.stopPropagation();
-                  window.open(target_url,"_blank");
+                  // Let the default link behavior work
                 }
               })
     		    }
