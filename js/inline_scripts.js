@@ -146,3 +146,18 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', handleScroll);
     handleScroll();
 });
+
+// Add hover effects for process steps
+document.addEventListener('DOMContentLoaded', function() {
+    const stepItems = document.querySelectorAll('.step-item');
+    stepItems.forEach(function(item) {
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateX(10px)';
+            this.style.boxShadow = '0 8px 30px rgba(0,0,0,0.12)';
+        });
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateX(0)';
+            this.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
+        });
+    });
+});
