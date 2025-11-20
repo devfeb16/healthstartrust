@@ -1,0 +1,88 @@
+<!-- Top Disclosure + Header (shared component) -->
+<div class="header-container">
+    <div class="header-wrapper">
+        <div class="disclosure-wrapper">
+            <div class="disclosure-section">
+                <p class="disclosure-container">
+                    <span class="disclosure-text">The listings featured on this site are from companies from which this site receives compensation. This influences where, how and in what order such listings appear on this site.</span>
+                    <span class="disclosure-button" id="disc-box"><a id="disc-link" data-toggle="modal" data-target="#ad-disclosure-modal">Advertising Disclosure</a>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="custom-header">
+    <div class="custom-header-wrapper">
+        <div class="custom-header-content">
+            <a href="/" class="custom-header-logo">
+                <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/..." alt="HealthStarTrust Logo" class="w-10 h-10">
+                <div class="custom-header-logo-text">
+                    <span class="logo-title">HealthStarTrust.com</span>
+                    <span class="logo-subtitle">Your dedicated source for Treatments</span>
+                </div>
+            </a>
+
+            <div class="custom-header-nav">
+                <ul class="custom-header-nav-links">
+                    <li><a href="/" class="custom-header-nav-link">Home</a></li>
+                    <li><a href="/about-us.html" class="custom-header-nav-link">About Us</a></li>
+                    <li class="custom-header-nav-dropdown" id="treatments-dropdown">
+                        <button type="button" class="custom-header-nav-dropdown-btn" id="treatments-btn">
+                            Treatments
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6"></path>
+                            </svg>
+                        </button>
+                        <ul class="custom-header-dropdown-menu">
+                            <li><a href="/treatments/eye-care.html">Eye Care</a></li>
+                            <li><a href="/treatments/weight-loss.html">Weight Loss</a></li>
+                            <li><a href="/treatments/anticoagulant.html">Anticoagulant</a></li>
+                            <li><a href="/treatments/asthma.html">Asthma</a></li>
+                            <li><a href="/treatments/antifungal.html">Antifungal</a></li>
+                            <li><a href="/treatments/fertility.html">Fertility</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/disclosure.html" class="custom-header-nav-link">Disclosure</a></li>
+                </ul>
+
+                <div class="custom-header-mobile-buttons">
+                    <button type="button" class="custom-header-mobile-btn" id="mobile-menu-btn" aria-label="Open menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" x2="20" y1="12" y2="12"></line>
+                            <line x1="4" x2="20" y1="6" y2="6"></line>
+                            <line x1="4" x2="20" y1="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="/contact.html" class="custom-header-contact-btn">Contact</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Menu (kept with header) -->
+<div class="custom-header-mobile-menu" id="mobile-menu">
+    <div class="custom-header-mobile-menu-content">
+        <div class="custom-header-mobile-menu-header">
+            <a href="/" class="custom-header-logo">
+                <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/..." alt="HealthStarTrust Logo" class="w-10 h-10">
+            </a>
+            <button type="button" class="custom-header-mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <ul class="custom-header-mobile-menu-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about-us.html">About Us</a></li>
+            <li><a href="/treatments.html">Treatments</a></li>
+            <li><a href="/disclosure.html">Disclosure</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </div>
+</div>

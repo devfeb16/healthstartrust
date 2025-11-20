@@ -1,0 +1,11 @@
+{
+  "mcp_servers": [
+    {
+      "name": "example-mcp",
+      "url": "https://mcp.example.com",
+      "api_key": "REPLACE_ME",
+      "description": "Example MCP server entry. Replace with your real MCP server and API key."
+    }
+  ],
+  "notes": "This file is intentionally placed in the repo for convenience. For a global setup, copy this file to ~/.gemini/settings.json (on Windows: %USERPROFILE%\\.gemini\\settings.json)."
+}

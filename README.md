@@ -33,4 +33,11 @@ This project uses a `.gitignore` file to exclude unnecessary files from version 
    - `css/` - Inline styles
    - `js/` - Inline scripts
    - Various asset directories for images and external resources
+ 
+## GEMINI / Agent Support
+
+- **Local GEMINI file**: A `GEMINI.md` file is available in the project root with project context and agent guidance.
+- **Local settings**: A repository-local `.gemini/settings.json` exists for convenience. To make these settings available to agents globally, copy it to `%USERPROFILE%\\.gemini\\settings.json` (Windows) or `~/.gemini/settings.json` (Linux/macOS).
+
+Refer to `GEMINI.md` for more details.
 
