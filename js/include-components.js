@@ -20,8 +20,8 @@
 
     document.addEventListener('DOMContentLoaded', async function(){
         await Promise.all([
-            insertComponent('site-header','/components/header.html'),
-            insertComponent('site-footer','/components/footer.html')
+            insertComponent('site-header','/components/header-main.html'),
+            insertComponent('site-footer','/components/footer-main.html')
         ]);
 
         // After header is injected, load header behavior script if present
