@@ -20,12 +20,12 @@
 
     document.addEventListener('DOMContentLoaded', async function(){
         await Promise.all([
-            insertComponent('site-header','/components/header-main.html'),
-            insertComponent('site-footer','/components/footer-main.html')
+            insertComponent('site-header','components/header-main.html'),
+            insertComponent('site-footer','components/footer-main.html')
         ]);
 
         // After header is injected, load header behavior script if present
-        const headerScriptPath = '/js/header.js';
+        const headerScriptPath = 'js/header.js';
         try{
             const s = document.createElement('script');
             s.src = headerScriptPath;

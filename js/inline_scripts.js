@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
         el.style.cursor = "default";
         el.addEventListener("click", function (e) { e.preventDefault(); });
     });
-    document.querySelectorAll('a[href="/"]').forEach(function (el) {
+    document.querySelectorAll('a[href="./"]').forEach(function (el) {
         el.removeAttribute("href");
         el.style.cursor = "default";
         el.addEventListener("click", function (e) { e.preventDefault(); });
