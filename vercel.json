@@ -1,45 +1,12 @@
 {
   "version": 2,
-  "routes": [
+  "builds": [
     {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/css/(.*)",
-      "dest": "/css/$1"
-    },
-    {
-      "src": "/js/(.*)",
-      "dest": "/js/$1"
-    },
-    {
-      "src": "/components/(.*)",
-      "dest": "/components/$1"
-    },
-    {
-      "src": "/assets.leads_iq.com/(.*)",
-      "dest": "/assets.leads_iq.com/$1"
-    },
-    {
-      "src": "/ldsiq_public.s3.us_east_2.amazonaws.com/(.*)",
-      "dest": "/ldsiq_public.s3.us_east_2.amazonaws.com/$1"
-    },
-    {
-      "src": "/public/(.*)",
-      "dest": "/public/$1"
-    },
-    {
-      "src": "/treatments/(.*)",
-      "dest": "/treatments/$1"
-    },
-    {
-      "src": "/(.*\\.html)",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "src": "**/*.html",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "."
+      }
     }
   ]
 }
