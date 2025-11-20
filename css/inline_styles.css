@@ -36,6 +36,7 @@ span.ribbon.yellow::after, span.ribbon.blue::after {border-top: 13.2px solid #64
 .top-choices.bg-white .topchoiceComponent .product-title {color: #647C9F !important;}
 .top-choices .card .product-pricing button.btn.btn-link, .cb-link, .lm-link, .reviews-section .review-link, .global-chart .article-desc a {color: #708090 !important;}
 .nav-item:hover .nav-link, .carousel-cta-btn {color: #647C9F !important;}
+.carousel-cta-btn .fa-arrow-right {margin-left: 8px; color: #647C9F !important;}
 .articles-section .product-title, .articles-section .btn-link, .article-details .header-2, .reviews-section .product-title, .review-details .review-title, .articles-section .date, .navbar-light .navbar-nav .nav-link {color: #3F5965 !important;}
 div.row.accordianBody.collapse.show a.btn.btn-link.font-weight-bold {color: ​#3F5965 !important; font-weight: 400 !important;}
 .btn-danger:hover, .btn-outline-danger:hover, .article-details .btn-danger:hover, .review-details-two .btn-danger:hover, .reviewIndexContent .btn-view-plan:hover, .btn-offer-call:hover {background-color: #3F4E64; border-color: #3F4E64; color: #FFFFFF;}
@@ -183,7 +184,7 @@ body {font-size: 14px !important;}
 .review-details-two .pros-cons-list {flex-direction: column;}
 .review-details-two .pros-list, .review-details-two .cons-list {flex: 0 0 100%;}
 /*Carousel*/
-.carousel-container {display: none !important;}
+/*.carousel-container {display: none !important;}*/
 .global-chart:has(.carousel-container) .carousel-products {margin-top: -15px !important;}
 /*Sticky Bard*/
 .sticky-module{ display: none;} 

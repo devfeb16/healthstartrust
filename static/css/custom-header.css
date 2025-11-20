@@ -4,14 +4,14 @@
     top: 0;
     z-index: 1000;
     background-color: #FFFFFF;
-    border-bottom: 5px solid #062B55;
+    border-bottom: 1px solid rgba(6, 43, 85, 0.3);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .custom-header-wrapper {
     max-width: 1250px;
     margin: 0 auto;
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 1rem;
 }
 
 .custom-header-content {
