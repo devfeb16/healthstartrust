@@ -6,6 +6,8 @@
     --hst-charcoal: #202020;
     --hst-ice: #E8EDF1;
     --hst-cloud: #EBF2F1;
+    --hst-teal: #09BCBE;
+    --hst-ocean: #0F6CAA;
 }
 
 body {
@@ -116,13 +118,48 @@ td {font-weight: 400;}
 #carouselCard2 .ribbon-carousel, #carouselCard3 .ribbon-carousel {display: none;}
 
 /*Sticky Bar*/
-#Footer-section {position: relative; z-index: 99;}
+#Footer-section {
+    position: relative;
+    z-index: 99;
+    background: linear-gradient(130deg, var(--hst-teal) 0%, var(--hst-ocean) 55%, var(--hst-navy) 100%);
+    color: #FFFFFF;
+    overflow: hidden;
+}
+
+#Footer-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 25% 15%, rgba(255, 255, 255, 0.18), transparent 45%);
+    opacity: 0.8;
+}
+
+#Footer-section .container,
+#Footer-section .footer-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+#Footer-section .footer-nav li,
+#Footer-section .footer-nav li a,
+#Footer-section .copyrights {
+    color: #F3FBFF;
+}
+
+#Footer-section .footer-nav li a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
 
 /* Footer Logo - Text white, SVG with footer background but original colors */
 #Footer-section .custom-header-logo {
-    background-color: var(--hst-blue);
-    padding: 0.75rem 1rem;
-    border-radius: 4px;
+    background: linear-gradient(140deg, var(--hst-teal), var(--hst-ocean));
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 35px rgba(5, 36, 59, 0.35);
 }
 
 #Footer-section .custom-header-logo img {
