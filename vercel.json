@@ -8,6 +8,54 @@
   ],
   "routes": [
     {
+      "src": "/about-us",
+      "dest": "/about-us.html"
+    },
+    {
+      "src": "/contact",
+      "dest": "/contact.html"
+    },
+    {
+      "src": "/disclosure",
+      "dest": "/disclosure.html"
+    },
+    {
+      "src": "/privacy-policy",
+      "dest": "/privacy-policy.html"
+    },
+    {
+      "src": "/terms-and-policies",
+      "dest": "/terms-and-policies.html"
+    },
+    {
+      "src": "/treatments",
+      "dest": "/treatments.html"
+    },
+    {
+      "src": "/treatments/eye-care",
+      "dest": "/treatments/eye-care.html"
+    },
+    {
+      "src": "/treatments/weight-loss",
+      "dest": "/treatments/weight-loss.html"
+    },
+    {
+      "src": "/treatments/anticoagulant",
+      "dest": "/treatments/anticoagulant.html"
+    },
+    {
+      "src": "/treatments/asthma",
+      "dest": "/treatments/asthma.html"
+    },
+    {
+      "src": "/treatments/antifungal",
+      "dest": "/treatments/antifungal.html"
+    },
+    {
+      "src": "/treatments/fertility",
+      "dest": "/treatments/fertility.html"
+    },
+    {
       "src": "/(.*)",
       "dest": "/$1"
     }
