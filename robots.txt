@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /static/scripts/
+Disallow: /scripts/
+Disallow: /temp_images/
+Crawl-delay: 5
+Sitemap: https://healthstartrust.com/sitemap.xml
+
