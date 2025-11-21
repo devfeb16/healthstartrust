@@ -9,51 +9,51 @@
   "routes": [
     {
       "src": "/about-us",
-      "dest": "/about-us.html"
+      "dest": "/about-us/index.html"
     },
     {
       "src": "/contact",
-      "dest": "/contact.html"
+      "dest": "/contact/index.html"
     },
     {
       "src": "/disclosure",
-      "dest": "/disclosure.html"
+      "dest": "/disclosure/index.html"
     },
     {
       "src": "/privacy-policy",
-      "dest": "/privacy-policy.html"
+      "dest": "/privacy-policy/index.html"
     },
     {
       "src": "/terms-and-policies",
-      "dest": "/terms-and-policies.html"
+      "dest": "/terms-and-policies/index.html"
     },
     {
       "src": "/treatments",
-      "dest": "/treatments.html"
+      "dest": "/treatments/index.html"
     },
     {
       "src": "/treatments/eye-care",
-      "dest": "/treatments/eye-care.html"
+      "dest": "/treatments/eye-care/index.html"
     },
     {
       "src": "/treatments/weight-loss",
-      "dest": "/treatments/weight-loss.html"
+      "dest": "/treatments/weight-loss/index.html"
     },
     {
       "src": "/treatments/anticoagulant",
-      "dest": "/treatments/anticoagulant.html"
+      "dest": "/treatments/anticoagulant/index.html"
     },
     {
       "src": "/treatments/asthma",
-      "dest": "/treatments/asthma.html"
+      "dest": "/treatments/asthma/index.html"
     },
     {
       "src": "/treatments/antifungal",
-      "dest": "/treatments/antifungal.html"
+      "dest": "/treatments/antifungal/index.html"
     },
     {
       "src": "/treatments/fertility",
-      "dest": "/treatments/fertility.html"
+      "dest": "/treatments/fertility/index.html"
     },
     {
       "src": "/(.*)",
