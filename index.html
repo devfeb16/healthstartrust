@@ -25,283 +25,134 @@
     <meta name="twitter:title" content="HealthStarTrust | Treatment Insights">
     <meta name="twitter:description" content="HealthStarTrust compares the best treatments with research-backed reviews, transparent pricing, and safety notes so you can find what works for you.">
     
-    <style>
+        <style>
         /* Critical header + hero CSS */
+        :root {
+            --hst-navy: #05243B;
+            --hst-blue: #215D80;
+            --hst-green: #9EC235;
+            --hst-red: #CC1630;
+            --hst-charcoal: #202020;
+            --hst-ice: #E8EDF1;
+            --hst-cloud: #EBF2F1;
+        }
+
+        body {
+            color: var(--hst-charcoal);
+            background-color: var(--hst-cloud);
+        }
+
         .custom-header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background-color: #FFFFFF;
-            border-bottom: 1px solid rgba(6, 43, 85, 0.3);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: var(--hst-navy);
+            border-bottom: 1px solid rgba(232, 237, 241, 0.35);
+            box-shadow: 0 8px 24px rgba(5, 36, 59, 0.18);
         }
-        .custom-header-wrapper {
-            max-width: 1250px;
-            margin: 0 auto;
-            padding: 0.25rem 1rem;
-        }
-        .custom-header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 64px;
-        }
-        .custom-header-logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            text-decoration: none;
-            color: inherit;
-        }
-        .custom-header-logo img {
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
-        }
-        .custom-header-logo-text {
-            display: none;
-        }
+
         .custom-header-logo-text .logo-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #062B55;
-            line-height: 1.2;
-            font-family: 'Poppins', sans-serif;
+            color: var(--hst-ice);
         }
+
         .custom-header-logo-text .logo-subtitle {
-            font-size: 0.75rem;
-            color: #484848;
-            line-height: 1.2;
-            font-family: 'Poppins', sans-serif;
+            color: var(--hst-cloud);
         }
-        .custom-header-nav {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-        .custom-header-nav-links {
-            display: none;
-            align-items: center;
-            gap: 1.5rem;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .custom-header-nav-link {
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: #484848;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font-family: 'Poppins', sans-serif;
-            padding: 0.5rem 0;
-        }
-        .custom-header-nav-link:hover,
-        .custom-header-nav-link.active {
-            color: #09BCBE;
-            text-decoration: underline;
-        }
-        .custom-header-nav-dropdown {
-            position: relative;
-        }
+
+        .custom-header-nav-link,
         .custom-header-nav-dropdown-btn {
-            background: none;
-            border: none;
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: #484848;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            padding: 0.5rem 0;
-            font-family: 'Poppins', sans-serif;
-            transition: color 0.3s ease;
+            color: var(--hst-ice);
         }
+
+        .custom-header-nav-link:hover,
+        .custom-header-nav-link.active,
         .custom-header-nav-dropdown-btn:hover {
-            color: #09BCBE;
+            color: var(--hst-green);
         }
-        .custom-header-nav-dropdown-btn svg {
-            width: 16px;
-            height: 16px;
-            transition: transform 0.3s ease;
-        }
-        .custom-header-nav-dropdown.active .custom-header-nav-dropdown-btn svg,
-        .custom-header-nav-dropdown:hover .custom-header-nav-dropdown-btn svg {
-            transform: rotate(180deg);
-        }
+
         .custom-header-dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #FFFFFF;
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            min-width: 200px;
-            padding: 0.5rem 0;
-            margin-top: 0.5rem;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-            z-index: 1000;
-            list-style: none;
+            background-color: var(--hst-ice);
+            border: 1px solid rgba(5, 36, 59, 0.15);
+            box-shadow: 0 18px 32px rgba(5, 36, 59, 0.18);
         }
-        .custom-header-nav-dropdown:hover .custom-header-dropdown-menu,
-        .custom-header-nav-dropdown.active .custom-header-dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
+
         .custom-header-dropdown-menu a {
-            display: block;
-            padding: 0.75rem 1.5rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: #484848;
-            text-decoration: none;
-            font-family: 'Poppins', sans-serif;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            color: var(--hst-charcoal);
         }
+
         .custom-header-dropdown-menu a:hover {
-            background-color: rgba(9, 188, 190, 0.1);
-            color: #09BCBE;
+            background-color: var(--hst-cloud);
+            color: var(--hst-blue);
         }
-        .custom-header-mobile-buttons {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+
         .custom-header-mobile-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: none;
-            border: none;
-            color: #484848;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            color: var(--hst-ice);
         }
+
         .custom-header-mobile-btn:hover {
-            background-color: rgba(9, 188, 190, 0.1);
-            color: #09BCBE;
+            background-color: rgba(232, 237, 241, 0.2);
+            color: var(--hst-green);
         }
-        .custom-header-mobile-btn svg {
-            width: 20px;
-            height: 20px;
-        }
+
         .custom-header-contact-btn {
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 0.5rem 1.25rem;
-            background-color: #09BCBE;
-            color: #FFFFFF;
-            border: none;
-            border-radius: 4px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            font-family: 'Poppins', sans-serif;
+            background-color: var(--hst-green);
+            color: var(--hst-navy);
         }
+
         .custom-header-contact-btn:hover {
-            background-color: #07a5a7;
+            background-color: var(--hst-blue);
             color: #FFFFFF;
-            text-decoration: none;
         }
+
         .custom-header-mobile-menu {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 999;
+            background-color: rgba(5, 36, 59, 0.7);
         }
-        .custom-header-mobile-menu.active {
-            display: block;
-        }
+
         .custom-header-mobile-menu-content {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 280px;
-            height: 100%;
-            background-color: #FFFFFF;
-            padding: 1.5rem;
-            overflow-y: auto;
-            box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+            background-color: var(--hst-cloud);
         }
-        .custom-header-mobile-menu-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
+
         .custom-header-mobile-menu-close {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: #484848;
-            cursor: pointer;
-            padding: 0;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: var(--hst-green);
+            color: var(--hst-navy);
+            box-shadow: 0 6px 18px rgba(5, 36, 59, 0.25);
         }
-        .custom-header-mobile-menu-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+
+        .custom-header-mobile-menu-close:hover {
+            background-color: var(--hst-blue);
+            color: #FFFFFF;
         }
-        .custom-header-mobile-menu-links li {
-            margin-bottom: 1rem;
-        }
+
         .custom-header-mobile-menu-links a {
-            display: block;
-            font-size: 1rem;
-            font-weight: 500;
-            color: #484848;
-            text-decoration: none;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #e0e0e0;
-            font-family: 'Poppins', sans-serif;
-            transition: color 0.3s ease;
+            color: var(--hst-charcoal);
+            border-bottom: 1px solid rgba(5, 36, 59, 0.15);
         }
+
         .custom-header-mobile-menu-links a:hover,
         .custom-header-mobile-menu-links a.active {
-            color: #09BCBE;
+            color: var(--hst-blue);
         }
-        @media (min-width: 640px) {
-            .custom-header-logo-text {
-                display: flex;
-                flex-direction: column;
-            }
+
+        .custom-header-mobile-nav-dropdown-btn {
+            color: var(--hst-charcoal);
         }
-        @media (min-width: 768px) {
-            .custom-header-nav-links {
-                display: flex;
-            }
-            .custom-header-mobile-buttons {
-                display: none;
-            }
-            .custom-header-contact-btn {
-                display: inline-flex;
-            }
+
+        .custom-header-mobile-nav-dropdown-btn:hover,
+        .custom-header-mobile-nav-dropdown-btn:focus {
+            color: var(--hst-blue);
         }
-        @media (max-width: 767px) {
-            .custom-header-contact-btn {
-                display: none;
-            }
+
+        .custom-header-mobile-dropdown-menu {
+            background-color: rgba(33, 93, 128, 0.08);
         }
+
+        .custom-header-mobile-dropdown-menu a {
+            color: var(--hst-charcoal);
+        }
+
+        .custom-header-mobile-dropdown-menu a:hover,
+        .custom-header-mobile-dropdown-menu a.active {
+            color: var(--hst-blue);
+            background-color: var(--hst-cloud);
+        }
+
         .hero-section {
             min-height: 60vh;
             display: flex;
@@ -310,33 +161,42 @@
             background-position: center;
             background-repeat: no-repeat;
         }
+
         .home-title,
         .home-subtitle,
         .service-title,
         .badge,
         .badge span {
             font-family: Poppins, sans-serif;
-            color: #FFFFFF;
+            color: var(--hst-ice);
         }
+
         .home-title {
             font-size: 40px;
             font-weight: 700;
             margin-bottom: 0.5rem;
         }
+
         .home-subtitle {
             font-size: 20px;
             font-weight: 500;
             margin-bottom: 0.5rem;
             line-height: 1.5;
+            color: var(--hst-cloud);
         }
+
         .badge {
-            background-color: #707070;
+            background-color: var(--hst-blue);
             font-size: 16px;
             border-radius: 20px;
+            color: var(--hst-ice);
         }
+
         .badge span {
             font-weight: 500;
+            color: var(--hst-ice);
         }
+
         @media only screen and (max-width: 576px) {
             .home-title {
                 font-size: 18px;
@@ -354,6 +214,7 @@
                 font-size: 10px;
                 font-weight: 400;
                 padding: 0 !important;
+                color: var(--hst-ice);
             }
             .badge span {
                 font-weight: 400;
@@ -2755,10 +2616,10 @@
               <div class="how-rank-bottom">
                   <!-- How We Rank Icon -->
                   <svg class="sidebar-icon hwr-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" style="width: 50px; height: 50px;">
-                      <path d="M6.01,26.68l-.61,3.58c-.04.23.06.47.25.61s.45.16.66.05l3.22-1.69,3.22,1.69c.09.05.19.07.29.07.13,0,.26-.04.37-.12.19-.14.29-.38.25-.61l-.61-3.58,2.6-2.54c.17-.17.23-.41.16-.64-.07-.23-.27-.39-.5-.43l-3.6-.52-1.61-3.26c-.21-.43-.91-.43-1.12,0l-1.61,3.26-3.6.52c-.24.03-.43.2-.5.43-.07.23-.01.47.16.64l2.6,2.54ZM7.86,23.75c.2-.03.38-.16.47-.34l1.19-2.42,1.19,2.42c.09.18.27.31.47.34l2.67.39-1.93,1.88c-.15.14-.21.35-.18.55l.46,2.66-2.39-1.25c-.09-.05-.19-.07-.29-.07s-.2.02-.29.07l-2.39,1.25.46-2.66c.03-.2-.03-.41-.18-.55l-1.93-1.88,2.67-.39Z" fill="#09bcbe"></path>
-                      <path d="M21.27,17.21l-.61,3.58c-.04.23.06.47.25.61.19.14.45.16.66.05l3.22-1.69,3.22,1.69c.09.05.19.07.29.07.13,0,.26-.04.37-.12.19-.14.29-.38.25-.61l-.61-3.58,2.6-2.54c.17-.17.23-.41.16-.64-.07-.23-.27-.39-.5-.43l-3.6-.52-1.61-3.26c-.21-.43-.91-.43-1.12,0l-1.61,3.26-3.6.52c-.24.03-.43.2-.5.43-.07.23-.01.47.16.64l2.6,2.54ZM23.12,14.27c.2-.03.38-.16.47-.34l1.19-2.42,1.19,2.42c.09.18.27.31.47.34l2.67.39-1.93,1.88c-.15.14-.21.35-.18.55l.46,2.66-2.39-1.25c-.09-.05-.19-.07-.29-.07s-.2.02-.29.07l-2.39,1.25.46-2.66c.04-.2-.03-.41-.18-.55l-1.93-1.88,2.67-.39Z" fill="#09bcbe"></path>
-                      <path d="M36.05,7.96l-.61,3.58c-.04.23.06.47.25.61s.45.16.66.05l3.22-1.69,3.22,1.69c.09.05.19.07.29.07.13,0,.26-.04.37-.12.19-.14.29-.38.25-.61l-.61-3.58,2.6-2.54c.17-.17.23-.41.16-.64-.07-.23-.27-.39-.5-.43l-3.6-.52-1.61-3.26c-.21-.43-.91-.43-1.12,0l-1.61,3.26-3.6.52c-.24.03-.43.2-.5.43-.07.23-.01.47.16.64l2.6,2.54ZM37.89,5.03c.2-.03.38-.16.47-.34l1.19-2.42,1.19,2.42c.09.18.27.31.47.34l2.67.39-1.93,1.88c-.15.14-.21.35-.18.55l.46,2.66-2.39-1.25c-.09-.05-.19-.07-.29-.07s-.2.02-.29.07l-2.39,1.25.46-2.66c.03-.2-.03-.41-.18-.55l-1.93-1.88,2.67-.39Z" fill="#09bcbe"></path>
-                      <path d="M48.81,42.5h-5.22v-26.37c0-.35-.28-.63-.62-.63h-6.82c-.35,0-.63.28-.63.63v26.37h-6.71v-17.59c0-.34-.28-.62-.62-.62h-6.82c-.35,0-.63.28-.63.62v17.59h-7.18v-9.34c0-.34-.28-.62-.63-.62h-6.82c-.34,0-.62.28-.62.62v9.34H1.18c-.35,0-.62.27-.62.62v6c0,.35.27.62.62.62h47.63c.35,0,.63-.27.63-.62v-6c0-.35-.28-.62-.63-.62ZM21.99,25.54h5.57v16.95h-5.57v-16.95ZM36.77,16.76h5.57v25.74h-5.57v-25.74ZM6.74,33.79h5.57v8.71h-5.57v-8.71ZM48.19,48.5H1.8v-4.76h46.39v4.76Z" fill="#09bcbe"></path>
+                      <path d="M6.01,26.68l-.61,3.58c-.04.23.06.47.25.61s.45.16.66.05l3.22-1.69,3.22,1.69c.09.05.19.07.29.07.13,0,.26-.04.37-.12.19-.14.29-.38.25-.61l-.61-3.58,2.6-2.54c.17-.17.23-.41.16-.64-.07-.23-.27-.39-.5-.43l-3.6-.52-1.61-3.26c-.21-.43-.91-.43-1.12,0l-1.61,3.26-3.6.52c-.24.03-.43.2-.5.43-.07.23-.01.47.16.64l2.6,2.54ZM7.86,23.75c.2-.03.38-.16.47-.34l1.19-2.42,1.19,2.42c.09.18.27.31.47.34l2.67.39-1.93,1.88c-.15.14-.21.35-.18.55l.46,2.66-2.39-1.25c-.09-.05-.19-.07-.29-.07s-.2.02-.29.07l-2.39,1.25.46-2.66c.03-.2-.03-.41-.18-.55l-1.93-1.88,2.67-.39Z" fill="var(--hst-blue)"></path>
+                      <path d="M21.27,17.21l-.61,3.58c-.04.23.06.47.25.61.19.14.45.16.66.05l3.22-1.69,3.22,1.69c.09.05.19.07.29.07.13,0,.26-.04.37-.12.19-.14.29-.38.25-.61l-.61-3.58,2.6-2.54c.17-.17.23-.41.16-.64-.07-.23-.27-.39-.5-.43l-3.6-.52-1.61-3.26c-.21-.43-.91-.43-1.12,0l-1.61,3.26-3.6.52c-.24.03-.43.2-.5.43-.07.23-.01.47.16.64l2.6,2.54ZM23.12,14.27c.2-.03.38-.16.47-.34l1.19-2.42,1.19,2.42c.09.18.27.31.47.34l2.67.39-1.93,1.88c-.15.14-.21.35-.18.55l.46,2.66-2.39-1.25c-.09-.05-.19-.07-.29-.07s-.2.02-.29.07l-2.39,1.25.46-2.66c.04-.2-.03-.41-.18-.55l-1.93-1.88,2.67-.39Z" fill="var(--hst-blue)"></path>
+                      <path d="M36.05,7.96l-.61,3.58c-.04.23.06.47.25.61s.45.16.66.05l3.22-1.69,3.22,1.69c.09.05.19.07.29.07.13,0,.26-.04.37-.12.19-.14.29-.38.25-.61l-.61-3.58,2.6-2.54c.17-.17.23-.41.16-.64-.07-.23-.27-.39-.5-.43l-3.6-.52-1.61-3.26c-.21-.43-.91-.43-1.12,0l-1.61,3.26-3.6.52c-.24.03-.43.2-.5.43-.07.23-.01.47.16.64l2.6,2.54ZM37.89,5.03c.2-.03.38-.16.47-.34l1.19-2.42,1.19,2.42c.09.18.27.31.47.34l2.67.39-1.93,1.88c-.15.14-.21.35-.18.55l.46,2.66-2.39-1.25c-.09-.05-.19-.07-.29-.07s-.2.02-.29.07l-2.39,1.25.46-2.66c.03-.2-.03-.41-.18-.55l-1.93-1.88,2.67-.39Z" fill="var(--hst-blue)"></path>
+                      <path d="M48.81,42.5h-5.22v-26.37c0-.35-.28-.63-.62-.63h-6.82c-.35,0-.63.28-.63.63v26.37h-6.71v-17.59c0-.34-.28-.62-.62-.62h-6.82c-.35,0-.63.28-.63.62v17.59h-7.18v-9.34c0-.34-.28-.62-.63-.62h-6.82c-.34,0-.62.28-.62.62v9.34H1.18c-.35,0-.62.27-.62.62v6c0,.35.27.62.62.62h47.63c.35,0,.63-.27.63-.62v-6c0-.35-.28-.62-.63-.62ZM21.99,25.54h5.57v16.95h-5.57v-16.95ZM36.77,16.76h5.57v25.74h-5.57v-25.74ZM6.74,33.79h5.57v8.71h-5.57v-8.71ZM48.19,48.5H1.8v-4.76h46.39v4.76Z" fill="var(--hst-blue)"></path>
                   </svg>
                   <button data-toggle="modal" data-target="#hwr-modal" type="button" class="btn btn-block btn-outline-danger">Read More</button>
               </div>
@@ -2853,9 +2714,9 @@
               <div class="card-body  px-0 pb-0">
                   <div class="why-top">
                     <svg class="sidebar-icon why-us-icon why-us-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="whyUs1">
-                        <rect x="11.8" y="6.2" width="8.4" height="3.2" rx="1" fill="#09bcbe"></rect>
-                        <rect x="14" y="8.6" width="3.2" height="14" rx="1" fill="#09bcbe"></rect>
-                        <path d="M26.39,0H5.61C2.51,0,0,2.51,0,5.61v26.39l6.23-5h20.16c3.1,0,5.61-2.51,5.61-5.61V5.61c0-3.1-2.51-5.61-5.61-5.61ZM30.5,21.39c0,2.27-1.84,4.11-4.11,4.11H5.71l-.41.33-3.8,3.04V5.61C1.5,3.34,3.34,1.5,5.61,1.5h20.78c2.27,0,4.11,1.84,4.11,4.11v15.78Z" fill="#09bcbe"></path>
+                        <rect x="11.8" y="6.2" width="8.4" height="3.2" rx="1" fill="var(--hst-blue)"></rect>
+                        <rect x="14" y="8.6" width="3.2" height="14" rx="1" fill="var(--hst-blue)"></rect>
+                        <path d="M26.39,0H5.61C2.51,0,0,2.51,0,5.61v26.39l6.23-5h20.16c3.1,0,5.61-2.51,5.61-5.61V5.61c0-3.1-2.51-5.61-5.61-5.61ZM30.5,21.39c0,2.27-1.84,4.11-4.11,4.11H5.71l-.41.33-3.8,3.04V5.61C1.5,3.34,3.34,1.5,5.61,1.5h20.78c2.27,0,4.11,1.84,4.11,4.11v15.78Z" fill="var(--hst-blue)"></path>
                     </svg>
                     
                     
@@ -2869,7 +2730,7 @@
                   <div class="why-top">
                     
                     <svg class="sidebar-icon choose-icon why-us-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.44 32" id="whyUs2">
-                        <path d="M35.44,16.95c-.05-.86-.53-1.68-1.27-2.23-.23-.17-.48-.3-.75-.42.41-.65.57-1.42.41-2.19-.26-1.25-1.35-2.23-2.7-2.45-.04,0-.1-.01-.14-.01l-7.09.07.21-5.99s0-.07-.01-.12c-.06-.48-.24-1.22-.78-1.94-.57-.76-1.28-1.18-1.81-1.41-1.22-.46-2.53-.3-3.46.44-.65.52-.91,1.18-1.02,1.64-.01.04-.02.09-.02.15l-.14,4.77c-.3,1.23-1.14,3.45-3.39,5.1-.77.57-1.65,1.02-2.58,1.32-.12-.29-.42-.51-.77-.51H.82c-.45,0-.82.36-.82.79v17.26c0,.43.37.79.82.79h9.31c.45,0,.82-.36.82-.79v-2.5c.18.12.3.27.35.38.14.25.42.42.72.42l16.73.1c.05,0,.1,0,.14-.01.45-.07,1.97-.42,2.88-1.87.67-1.05.65-2.11.52-2.82.6-.24,1.37-.71,1.79-1.57.53-1.09.31-2.4-.48-3.43.33-.16.63-.36.89-.62.66-.64,1-1.5.94-2.35ZM9.31,30.43H1.65v-15.69h7.67v15.69ZM33.32,18.2c-.36.35-.86.53-1.36.51,0,0,0,0-.01,0,0,0-.02,0-.03,0h-5.47c-.45,0-.82.35-.82.79s.37.79.82.79h5.21c.98.66,1.26,1.73.93,2.4-.31.64-1.14.87-1.38.93h-5.11c-.45,0-.82.35-.82.79s.37.79.82.79h4.57c.09.43.12,1.1-.29,1.75-.53.82-1.4,1.06-1.69,1.11l-16.22-.1c-.21-.25-.46-.46-.76-.62-.25-.14-.5-.22-.76-.26v-11.73c1.28-.37,2.48-.95,3.53-1.72,2.7-1.99,3.66-4.66,4-6.08.01-.04.02-.09.02-.15l.14-4.76c.05-.23.19-.51.46-.73.45-.36,1.12-.42,1.74-.19.31.14.76.4,1.12.88.32.42.44.86.48,1.16l-.23,6.75c-.01.21.08.42.23.58.15.15.37.23.6.23l7.86-.08c.65.14,1.16.61,1.28,1.2.14.65-.23,1.33-.86,1.66h-4.86c-.45,0-.82.35-.82.79s.37.79.82.79h5.08s.04-.01.06-.01c.03,0,.06,0,.09,0,.5-.09,1.02.02,1.43.32.38.27.61.67.64,1.09.03.41-.14.82-.47,1.14Z" fill="#09bcbe"></path>
+                        <path d="M35.44,16.95c-.05-.86-.53-1.68-1.27-2.23-.23-.17-.48-.3-.75-.42.41-.65.57-1.42.41-2.19-.26-1.25-1.35-2.23-2.7-2.45-.04,0-.1-.01-.14-.01l-7.09.07.21-5.99s0-.07-.01-.12c-.06-.48-.24-1.22-.78-1.94-.57-.76-1.28-1.18-1.81-1.41-1.22-.46-2.53-.3-3.46.44-.65.52-.91,1.18-1.02,1.64-.01.04-.02.09-.02.15l-.14,4.77c-.3,1.23-1.14,3.45-3.39,5.1-.77.57-1.65,1.02-2.58,1.32-.12-.29-.42-.51-.77-.51H.82c-.45,0-.82.36-.82.79v17.26c0,.43.37.79.82.79h9.31c.45,0,.82-.36.82-.79v-2.5c.18.12.3.27.35.38.14.25.42.42.72.42l16.73.1c.05,0,.1,0,.14-.01.45-.07,1.97-.42,2.88-1.87.67-1.05.65-2.11.52-2.82.6-.24,1.37-.71,1.79-1.57.53-1.09.31-2.4-.48-3.43.33-.16.63-.36.89-.62.66-.64,1-1.5.94-2.35ZM9.31,30.43H1.65v-15.69h7.67v15.69ZM33.32,18.2c-.36.35-.86.53-1.36.51,0,0,0,0-.01,0,0,0-.02,0-.03,0h-5.47c-.45,0-.82.35-.82.79s.37.79.82.79h5.21c.98.66,1.26,1.73.93,2.4-.31.64-1.14.87-1.38.93h-5.11c-.45,0-.82.35-.82.79s.37.79.82.79h4.57c.09.43.12,1.1-.29,1.75-.53.82-1.4,1.06-1.69,1.11l-16.22-.1c-.21-.25-.46-.46-.76-.62-.25-.14-.5-.22-.76-.26v-11.73c1.28-.37,2.48-.95,3.53-1.72,2.7-1.99,3.66-4.66,4-6.08.01-.04.02-.09.02-.15l.14-4.76c.05-.23.19-.51.46-.73.45-.36,1.12-.42,1.74-.19.31.14.76.4,1.12.88.32.42.44.86.48,1.16l-.23,6.75c-.01.21.08.42.23.58.15.15.37.23.6.23l7.86-.08c.65.14,1.16.61,1.28,1.2.14.65-.23,1.33-.86,1.66h-4.86c-.45,0-.82.35-.82.79s.37.79.82.79h5.08s.04-.01.06-.01c.03,0,.06,0,.09,0,.5-.09,1.02.02,1.43.32.38.27.61.67.64,1.09.03.41-.14.82-.47,1.14Z" fill="var(--hst-blue)"></path>
                     </svg>
                     
                     <p class="pl-3 sidebar-list-title">Choose Confidently</p>
@@ -2909,48 +2770,48 @@
                                   <!-- Treatment Process -->
                                   <div class="treatment-process mb-5">
                                       <div class="text-center mb-5">
-                                          <h3 class="article-title mb-3" style="font-size: 2.2rem; font-weight: 700; color: #2c3e50;">How Our Treatment Matching Works</h3>
-                                          <p style="font-size: 1.1rem; color: #6c757d; margin-bottom: 0;">Simple steps to find your perfect healthcare solution</p>
+                                          <h3 class="article-title mb-3" style="font-size: 2.2rem; font-weight: 700; color: var(--hst-navy);">How Our Treatment Matching Works</h3>
+                                          <p style="font-size: 1.1rem; color: rgba(32, 32, 32, 0.75); margin-bottom: 0;">Simple steps to find your perfect healthcare solution</p>
                                       </div>
                                       <div class="process-steps mb-4">
                                       <div class="process-steps">
-                                          <div class="step-item" style="display: flex; align-items: center; margin-bottom: 2.5rem; padding: 2.5rem; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #e9ecef; transition: all 0.3s ease;" >
-                                              <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 2rem; flex-shrink: 0; color: white; font-weight: 700; font-size: 1.5rem;">
+                                          <div class="step-item" style="display: flex; align-items: center; margin-bottom: 2.5rem; padding: 2.5rem; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid var(--hst-ice); transition: all 0.3s ease;" >
+                                              <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--hst-blue), var(--hst-navy)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 2rem; flex-shrink: 0; color: white; font-weight: 700; font-size: 1.5rem;">
                                                   1
                                               </div>
                                               <div>
-                                                  <h4 style="font-weight: 600; margin-bottom: 0.8rem; color: #2c3e50; font-size: 1.3rem;">Assessment</h4>
-                                                  <p style="margin-bottom: 0; color: #6c757d; line-height: 1.6; font-size: 1rem;">Tell us about your health goals and current condition through our simple questionnaire.</p>
+                                                  <h4 style="font-weight: 600; margin-bottom: 0.8rem; color: var(--hst-navy); font-size: 1.3rem;">Assessment</h4>
+                                                  <p style="margin-bottom: 0; color: rgba(32, 32, 32, 0.75); line-height: 1.6; font-size: 1rem;">Tell us about your health goals and current condition through our simple questionnaire.</p>
                                               </div>
                                           </div>
 
-                                          <div class="step-item" style="display: flex; align-items: center; margin-bottom: 2.5rem; padding: 2.5rem; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #e9ecef; transition: all 0.3s ease;" >
-                                              <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #43e97b, #38f9d7); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 2rem; flex-shrink: 0; color: white; font-weight: 700; font-size: 1.5rem;">
+                                          <div class="step-item" style="display: flex; align-items: center; margin-bottom: 2.5rem; padding: 2.5rem; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid var(--hst-ice); transition: all 0.3s ease;" >
+                                              <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--hst-green), var(--hst-blue)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 2rem; flex-shrink: 0; color: white; font-weight: 700; font-size: 1.5rem;">
                                                   2
                                               </div>
                                               <div>
-                                                  <h4 style="font-weight: 600; margin-bottom: 0.8rem; color: #2c3e50; font-size: 1.3rem;">Matching</h4>
-                                                  <p style="margin-bottom: 0; color: #6c757d; line-height: 1.6; font-size: 1rem;">Our algorithm matches you with treatments based on your unique profile and preferences.</p>
+                                                  <h4 style="font-weight: 600; margin-bottom: 0.8rem; color: var(--hst-navy); font-size: 1.3rem;">Matching</h4>
+                                                  <p style="margin-bottom: 0; color: rgba(32, 32, 32, 0.75); line-height: 1.6; font-size: 1rem;">Our algorithm matches you with treatments based on your unique profile and preferences.</p>
                                               </div>
                                           </div>
 
-                                          <div class="step-item" style="display: flex; align-items: center; margin-bottom: 2.5rem; padding: 2.5rem; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #e9ecef; transition: all 0.3s ease;" >
-                                              <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 2rem; flex-shrink: 0; color: white; font-weight: 700; font-size: 1.5rem;">
+                                          <div class="step-item" style="display: flex; align-items: center; margin-bottom: 2.5rem; padding: 2.5rem; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid var(--hst-ice); transition: all 0.3s ease;" >
+                                              <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--hst-blue), var(--hst-red)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 2rem; flex-shrink: 0; color: white; font-weight: 700; font-size: 1.5rem;">
                                                   3
                                               </div>
                                               <div>
-                                                  <h4 style="font-weight: 600; margin-bottom: 0.8rem; color: #2c3e50; font-size: 1.3rem;">Consultation</h4>
-                                                  <p style="margin-bottom: 0; color: #6c757d; line-height: 1.6; font-size: 1rem;">Connect with licensed healthcare providers for personalized medical advice.</p>
+                                                  <h4 style="font-weight: 600; margin-bottom: 0.8rem; color: var(--hst-navy); font-size: 1.3rem;">Consultation</h4>
+                                                  <p style="margin-bottom: 0; color: rgba(32, 32, 32, 0.75); line-height: 1.6; font-size: 1rem;">Connect with licensed healthcare providers for personalized medical advice.</p>
                                               </div>
                                           </div>
 
-                                          <div class="step-item" style="display: flex; align-items: center; margin-bottom: 0; padding: 2.5rem; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #e9ecef; transition: all 0.3s ease;" >
+                                          <div class="step-item" style="display: flex; align-items: center; margin-bottom: 0; padding: 2.5rem; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid var(--hst-ice); transition: all 0.3s ease;" >
                                               <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #fa709a, #fee140); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 2rem; flex-shrink: 0; color: white; font-weight: 700; font-size: 1.5rem;">
                                                   4
                                               </div>
                                               <div>
-                                                  <h4 style="font-weight: 600; margin-bottom: 0.8rem; color: #2c3e50; font-size: 1.3rem;">Treatment</h4>
-                                                  <p style="margin-bottom: 0; color: #6c757d; line-height: 1.6; font-size: 1rem;">Receive your prescribed treatment with discreet shipping and ongoing support.</p>
+                                                  <h4 style="font-weight: 600; margin-bottom: 0.8rem; color: var(--hst-navy); font-size: 1.3rem;">Treatment</h4>
+                                                  <p style="margin-bottom: 0; color: rgba(32, 32, 32, 0.75); line-height: 1.6; font-size: 1rem;">Receive your prescribed treatment with discreet shipping and ongoing support.</p>
                                               </div>
                                           </div>
                                       </div>
@@ -2959,44 +2820,44 @@
                                   <!-- Success Stories -->
                                   <div class="success-stories mb-5">
                                       <div class="text-center mb-5">
-                                          <h3 class="article-title mb-3" style="font-size: 2.2rem; font-weight: 700; color: #2c3e50;">Success Stories</h3>
-                                          <p style="font-size: 1.1rem; color: #6c757d; margin-bottom: 0;">Real experiences from real people who found their solution</p>
+                                          <h3 class="article-title mb-3" style="font-size: 2.2rem; font-weight: 700; color: var(--hst-navy);">Success Stories</h3>
+                                          <p style="font-size: 1.1rem; color: rgba(32, 32, 32, 0.75); margin-bottom: 0;">Real experiences from real people who found their solution</p>
                                       </div>
                                       <div class="row g-4 mb-4">
                                       <div class="row g-4">
                                           <div class="col-md-6">
-                                              <div class="story-card" style="background: white; border-radius: 16px; padding: 3rem 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #e9ecef; height: 100%; transition: all 0.3s ease; position: relative;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'">
+                                              <div class="story-card" style="background: white; border-radius: 16px; padding: 3rem 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid var(--hst-ice); height: 100%; transition: all 0.3s ease; position: relative;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'">
                                                   <div style="position: absolute; top: 2rem; left: 2rem; color: #fa709a; font-size: 2.5rem; opacity: 0.3;">
                                                       <i class="fas fa-quote-left"></i>
                                                   </div>
                                                   <div style="padding-left: 1rem;">
-                                                      <p style="font-style: italic; color: #6c757d; margin-bottom: 2rem; line-height: 1.7; font-size: 1rem;">"HealthStarTrust helped me find the perfect treatment for my condition. The process was seamless and the results exceeded my expectations."</p>
+                                                      <p style="font-style: italic; color: rgba(32, 32, 32, 0.75); margin-bottom: 2rem; line-height: 1.7; font-size: 1rem;">"HealthStarTrust helped me find the perfect treatment for my condition. The process was seamless and the results exceeded my expectations."</p>
                                                       <div style="display: flex; align-items: center;">
-                                                          <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; margin-right: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">
+                                                          <div style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--hst-blue), var(--hst-navy)); border-radius: 50%; margin-right: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">
                                                               SM
                                                           </div>
                                                           <div>
-                                                              <div style="font-weight: 600; color: #2c3e50; font-size: 0.95rem;">Sarah M.</div>
-                                                              <div style="color: #6c757d; font-size: 0.85rem;">Eye Care Patient</div>
+                                                              <div style="font-weight: 600; color: var(--hst-navy); font-size: 0.95rem;">Sarah M.</div>
+                                                              <div style="color: rgba(32, 32, 32, 0.75); font-size: 0.85rem;">Eye Care Patient</div>
                                                           </div>
                                                       </div>
                                                   </div>
                                               </div>
                                           </div>
                                           <div class="col-md-6">
-                                              <div class="story-card" style="background: white; border-radius: 16px; padding: 3rem 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #e9ecef; height: 100%; transition: all 0.3s ease; position: relative;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'">
-                                                  <div style="position: absolute; top: 2rem; left: 2rem; color: #43e97b; font-size: 2.5rem; opacity: 0.3;">
+                                              <div class="story-card" style="background: white; border-radius: 16px; padding: 3rem 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid var(--hst-ice); height: 100%; transition: all 0.3s ease; position: relative;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'">
+                                                  <div style="position: absolute; top: 2rem; left: 2rem; color: var(--hst-green); font-size: 2.5rem; opacity: 0.3;">
                                                       <i class="fas fa-quote-left"></i>
                                                   </div>
                                                   <div style="padding-left: 1rem;">
-                                                      <p style="font-style: italic; color: #6c757d; margin-bottom: 2rem; line-height: 1.7; font-size: 1rem;">"The expert guidance and personalized recommendations made all the difference. I finally found relief after years of struggling."</p>
+                                                      <p style="font-style: italic; color: rgba(32, 32, 32, 0.75); margin-bottom: 2rem; line-height: 1.7; font-size: 1rem;">"The expert guidance and personalized recommendations made all the difference. I finally found relief after years of struggling."</p>
                                                       <div style="display: flex; align-items: center;">
-                                                          <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #43e97b, #38f9d7); border-radius: 50%; margin-right: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">
+                                                          <div style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--hst-green), var(--hst-blue)); border-radius: 50%; margin-right: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">
                                                               MR
                                                           </div>
                                                           <div>
-                                                              <div style="font-weight: 600; color: #2c3e50; font-size: 0.95rem;">Michael R.</div>
-                                                              <div style="color: #6c757d; font-size: 0.85rem;">Asthma Patient</div>
+                                                              <div style="font-weight: 600; color: var(--hst-navy); font-size: 0.95rem;">Michael R.</div>
+                                                              <div style="color: rgba(32, 32, 32, 0.75); font-size: 0.85rem;">Asthma Patient</div>
                                                           </div>
                                                       </div>
                                                   </div>
@@ -3278,10 +3139,10 @@
           <div class="col-lg-9 how-rank-title-box">
               <!-- How We Rank Icon -->
               <svg class="mobile-hwr-icon hwr-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" style="width: 50px; height: 50px; margin-right: 1rem;">
-                  <path d="M6.01,26.68l-.61,3.58c-.04.23.06.47.25.61s.45.16.66.05l3.22-1.69,3.22,1.69c.09.05.19.07.29.07.13,0,.26-.04.37-.12.19-.14.29-.38.25-.61l-.61-3.58,2.6-2.54c.17-.17.23-.41.16-.64-.07-.23-.27-.39-.5-.43l-3.6-.52-1.61-3.26c-.21-.43-.91-.43-1.12,0l-1.61,3.26-3.6.52c-.24.03-.43.2-.5.43-.07.23-.01.47.16.64l2.6,2.54ZM7.86,23.75c.2-.03.38-.16.47-.34l1.19-2.42,1.19,2.42c.09.18.27.31.47.34l2.67.39-1.93,1.88c-.15.14-.21.35-.18.55l.46,2.66-2.39-1.25c-.09-.05-.19-.07-.29-.07s-.2.02-.29.07l-2.39,1.25.46-2.66c.03-.2-.03-.41-.18-.55l-1.93-1.88,2.67-.39Z" fill="#09bcbe"></path>
-                  <path d="M21.27,17.21l-.61,3.58c-.04.23.06.47.25.61.19.14.45.16.66.05l3.22-1.69,3.22,1.69c.09.05.19.07.29.07.13,0,.26-.04.37-.12.19-.14.29-.38.25-.61l-.61-3.58,2.6-2.54c.17-.17.23-.41.16-.64-.07-.23-.27-.39-.5-.43l-3.6-.52-1.61-3.26c-.21-.43-.91-.43-1.12,0l-1.61,3.26-3.6.52c-.24.03-.43.2-.5.43-.07.23-.01.47.16.64l2.6,2.54ZM23.12,14.27c.2-.03.38-.16.47-.34l1.19-2.42,1.19,2.42c.09.18.27.31.47.34l2.67.39-1.93,1.88c-.15.14-.21.35-.18.55l.46,2.66-2.39-1.25c-.09-.05-.19-.07-.29-.07s-.2.02-.29.07l-2.39,1.25.46-2.66c.04-.2-.03-.41-.18-.55l-1.93-1.88,2.67-.39Z" fill="#09bcbe"></path>
-                  <path d="M36.05,7.96l-.61,3.58c-.04.23.06.47.25.61s.45.16.66.05l3.22-1.69,3.22,1.69c.09.05.19.07.29.07.13,0,.26-.04.37-.12.19-.14.29-.38.25-.61l-.61-3.58,2.6-2.54c.17-.17.23-.41.16-.64-.07-.23-.27-.39-.5-.43l-3.6-.52-1.61-3.26c-.21-.43-.91-.43-1.12,0l-1.61,3.26-3.6.52c-.24.03-.43.2-.5.43-.07.23-.01.47.16.64l2.6,2.54ZM37.89,5.03c.2-.03.38-.16.47-.34l1.19-2.42,1.19,2.42c.09.18.27.31.47.34l2.67.39-1.93,1.88c-.15.14-.21.35-.18.55l.46,2.66-2.39-1.25c-.09-.05-.19-.07-.29-.07s-.2.02-.29.07l-2.39,1.25.46-2.66c.03-.2-.03-.41-.18-.55l-1.93-1.88,2.67-.39Z" fill="#09bcbe"></path>
-                  <path d="M48.81,42.5h-5.22v-26.37c0-.35-.28-.63-.62-.63h-6.82c-.35,0-.63.28-.63.63v26.37h-6.71v-17.59c0-.34-.28-.62-.62-.62h-6.82c-.35,0-.63.28-.63.62v17.59h-7.18v-9.34c0-.34-.28-.62-.63-.62h-6.82c-.34,0-.62.28-.62.62v9.34H1.18c-.35,0-.62.27-.62.62v6c0,.35.27.62.62.62h47.63c.35,0,.63-.27.63-.62v-6c0-.35-.28-.62-.63-.62ZM21.99,25.54h5.57v16.95h-5.57v-16.95ZM36.77,16.76h5.57v25.74h-5.57v-25.74ZM6.74,33.79h5.57v8.71h-5.57v-8.71ZM48.19,48.5H1.8v-4.76h46.39v4.76Z" fill="#09bcbe"></path>
+                  <path d="M6.01,26.68l-.61,3.58c-.04.23.06.47.25.61s.45.16.66.05l3.22-1.69,3.22,1.69c.09.05.19.07.29.07.13,0,.26-.04.37-.12.19-.14.29-.38.25-.61l-.61-3.58,2.6-2.54c.17-.17.23-.41.16-.64-.07-.23-.27-.39-.5-.43l-3.6-.52-1.61-3.26c-.21-.43-.91-.43-1.12,0l-1.61,3.26-3.6.52c-.24.03-.43.2-.5.43-.07.23-.01.47.16.64l2.6,2.54ZM7.86,23.75c.2-.03.38-.16.47-.34l1.19-2.42,1.19,2.42c.09.18.27.31.47.34l2.67.39-1.93,1.88c-.15.14-.21.35-.18.55l.46,2.66-2.39-1.25c-.09-.05-.19-.07-.29-.07s-.2.02-.29.07l-2.39,1.25.46-2.66c.03-.2-.03-.41-.18-.55l-1.93-1.88,2.67-.39Z" fill="var(--hst-blue)"></path>
+                  <path d="M21.27,17.21l-.61,3.58c-.04.23.06.47.25.61.19.14.45.16.66.05l3.22-1.69,3.22,1.69c.09.05.19.07.29.07.13,0,.26-.04.37-.12.19-.14.29-.38.25-.61l-.61-3.58,2.6-2.54c.17-.17.23-.41.16-.64-.07-.23-.27-.39-.5-.43l-3.6-.52-1.61-3.26c-.21-.43-.91-.43-1.12,0l-1.61,3.26-3.6.52c-.24.03-.43.2-.5.43-.07.23-.01.47.16.64l2.6,2.54ZM23.12,14.27c.2-.03.38-.16.47-.34l1.19-2.42,1.19,2.42c.09.18.27.31.47.34l2.67.39-1.93,1.88c-.15.14-.21.35-.18.55l.46,2.66-2.39-1.25c-.09-.05-.19-.07-.29-.07s-.2.02-.29.07l-2.39,1.25.46-2.66c.04-.2-.03-.41-.18-.55l-1.93-1.88,2.67-.39Z" fill="var(--hst-blue)"></path>
+                  <path d="M36.05,7.96l-.61,3.58c-.04.23.06.47.25.61s.45.16.66.05l3.22-1.69,3.22,1.69c.09.05.19.07.29.07.13,0,.26-.04.37-.12.19-.14.29-.38.25-.61l-.61-3.58,2.6-2.54c.17-.17.23-.41.16-.64-.07-.23-.27-.39-.5-.43l-3.6-.52-1.61-3.26c-.21-.43-.91-.43-1.12,0l-1.61,3.26-3.6.52c-.24.03-.43.2-.5.43-.07.23-.01.47.16.64l2.6,2.54ZM37.89,5.03c.2-.03.38-.16.47-.34l1.19-2.42,1.19,2.42c.09.18.27.31.47.34l2.67.39-1.93,1.88c-.15.14-.21.35-.18.55l.46,2.66-2.39-1.25c-.09-.05-.19-.07-.29-.07s-.2.02-.29.07l-2.39,1.25.46-2.66c.03-.2-.03-.41-.18-.55l-1.93-1.88,2.67-.39Z" fill="var(--hst-blue)"></path>
+                  <path d="M48.81,42.5h-5.22v-26.37c0-.35-.28-.63-.62-.63h-6.82c-.35,0-.63.28-.63.63v26.37h-6.71v-17.59c0-.34-.28-.62-.62-.62h-6.82c-.35,0-.63.28-.63.62v17.59h-7.18v-9.34c0-.34-.28-.62-.63-.62h-6.82c-.34,0-.62.28-.62.62v9.34H1.18c-.35,0-.62.27-.62.62v6c0,.35.27.62.62.62h47.63c.35,0,.63-.27.63-.62v-6c0-.35-.28-.62-.63-.62ZM21.99,25.54h5.57v16.95h-5.57v-16.95ZM36.77,16.76h5.57v25.74h-5.57v-25.74ZM6.74,33.79h5.57v8.71h-5.57v-8.71ZM48.19,48.5H1.8v-4.76h46.39v4.76Z" fill="var(--hst-blue)"></path>
               </svg>
               <p class="text-center home-section-title">How We Rank</p>
           </div>
@@ -3317,7 +3178,7 @@
                       <p class="modal-body-copy"><strong>How Compensation Affects Content:</strong> Compensation received may influence the placement, prominence, and presentation of healthcare providers and services on our platform. However, all editorial content, reviews, and recommendations are determined based on our independent research and evaluation criteria.</p>
                       <p class="modal-body-copy"><strong>Transparency Commitment:</strong> We are committed to transparency about our business relationships. All compensated partnerships are clearly disclosed, and we maintain editorial independence in our content creation and healthcare recommendations.</p>
                       <p class="modal-body-copy"><strong>Disclaimer:</strong> The information provided on HealthStarTrust.com is for educational purposes only and should not replace professional medical advice. All healthcare decisions should be made in consultation with qualified healthcare providers. We do not guarantee the accuracy, completeness, or currency of information on our platform.</p>
-                      <p class="modal-body-copy"><strong>Terms of Use:</strong> By using HealthStarTrust.com, you agree to our <a href="/terms-and-policies" style="color: #09BCBE;">Terms and Conditions</a> and <a href="/privacy-policy" style="color: #09BCBE;">Privacy Policy</a>. All users are subject to these terms when accessing our services.</p>
+                      <p class="modal-body-copy"><strong>Terms of Use:</strong> By using HealthStarTrust.com, you agree to our <a href="/terms-and-policies" style="color: var(--hst-blue);">Terms and Conditions</a> and <a href="/privacy-policy" style="color: var(--hst-blue);">Privacy Policy</a>. All users are subject to these terms when accessing our services.</p>
                   </div>
       	      </div>
       	    </div>
