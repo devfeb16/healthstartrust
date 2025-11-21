@@ -41,6 +41,19 @@
         });
     };
 
+    const initMobileDropdown = () => {
+        const dropdownBtn = document.getElementById('mobile-treatments-btn');
+        const dropdown = document.getElementById('mobile-treatments-dropdown');
+        if (!dropdownBtn || !dropdown) return;
+
+        const toggleDropdown = (event) => {
+            event.preventDefault();
+            dropdown.classList.toggle('active');
+        };
+
+        dropdownBtn.addEventListener('click', toggleDropdown);
+    };
+
     const initNavHighlight = () => {
         const currentPath = window.location.pathname.replace(/index\.html$/, '') || '/';
         const links = document.querySelectorAll('.custom-header-nav-link, .custom-header-mobile-menu-links a');
@@ -151,6 +164,7 @@
 
     ready(() => {
         initMobileMenu();
+        initMobileDropdown();
         initNavHighlight();
         initStickyModule();
         initModals();
