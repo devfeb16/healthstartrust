@@ -1,0 +1,24 @@
+{
+  "name": "neweron",
+  "version": "1.0.0",
+  "description": "Static marketing website for HealthStarTrust treatment guides.",
+  "type": "module",
+  "scripts": {
+    "build": "node ./scripts/build.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devfeb16/healthstartrust.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devfeb16/healthstartrust/issues"
+  },
+  "homepage": "https://github.com/devfeb16/healthstartrust#readme",
+  "devDependencies": {
+    "esbuild": "^0.27.0",
+    "lightningcss": "^1.30.2"
+  }
+}

@@ -20,14 +20,24 @@ This project uses a `.gitignore` file to exclude unnecessary files from version 
    cd neweron
    ```
 
-2. The project is a static website. Simply open `index.html` in a web browser or serve it using a local web server.
+2. Install dependencies if you plan to rebuild the optimized assets:
+   ```bash
+   npm install
+   ```
 
-3. For local development, you can use:
+3. The project is a static website. Simply open `index.html` in a web browser or serve it using a local web server.
+
+4. For local development, you can use:
    - Python: `python -m http.server 8000`
    - Node.js: `npx http-server`
    - VS Code Live Server extension
 
-4. The project structure:
+5. Rebuild the minified CSS/JS bundle (writes to `dist/assets`) whenever you modify files under `static/css/` or `js/`:
+   ```bash
+   npm run build
+   ```
+
+6. The project structure:
    - `index.html` - Main HTML file
    - `static/` - CSS and JavaScript files
    - `css/` - Inline styles

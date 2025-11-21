@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">HealthStarTrust Logo</title>
+  <desc id="logoDesc">Stylized shield with medical cross</desc>
+  <defs>
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09BCBE"/>
+      <stop offset="100%" stop-color="#0F6CAA"/>
+    </linearGradient>
+  </defs>
+  <path d="M24 4l16 6v10c0 10.5-6.9 19.7-16 24-9.1-4.3-16-13.5-16-24V10l16-6z" fill="url(#shieldGradient)"/>
+  <path d="M21 17h-5v6h5v5h6v-5h5v-6h-5v-5h-6v5z" fill="#FFFFFF"/>
+</svg>
+
