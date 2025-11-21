@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="WellnessDirect badge">
+    <defs>
+        <linearGradient id="wdGradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#05243B" />
+            <stop offset="100%" stop-color="#CC1630" />
+        </linearGradient>
+    </defs>
+    <rect width="128" height="128" rx="28" fill="url(#wdGradient)" />
+    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" font-family="Poppins, Arial, sans-serif" font-size="44" font-weight="600" fill="#FFFFFF">
+        WD
+    </text>
+</svg>
+

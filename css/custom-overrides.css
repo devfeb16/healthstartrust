@@ -417,6 +417,141 @@ div.carousel-container {margin-top: 0 !important;}
     transform: translateX(3px);
 }
 
+/* Treatment recommendation cards */
+.treatment-card-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.treatment-card-stack .treatment-card {
+    border: 1px solid rgba(5, 36, 59, 0.12);
+    border-radius: 1rem;
+    box-shadow: 0 25px 45px rgba(5, 36, 59, 0.08);
+    background-color: #FFFFFF;
+}
+
+.treatment-card__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media screen and (min-width: 992px) {
+    .treatment-card__layout {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.treatment-card__brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 240px;
+}
+
+.treatment-card__rank {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--hst-blue);
+}
+
+.treatment-card__logo {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: var(--hst-ice);
+    padding: 0.65rem;
+    object-fit: contain;
+    box-shadow: inset 0 0 0 1px rgba(5, 36, 59, 0.08);
+}
+
+.treatment-card__rating {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.treatment-card__score {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--hst-navy);
+    margin-right: 0.35rem;
+}
+
+.treatment-card__score-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--hst-blue);
+}
+
+.treatment-card__stars {
+    display: flex;
+    align-items: center;
+}
+
+.treatment-card__stars i {
+    color: var(--hst-green);
+    margin-right: 0.2rem;
+}
+
+.treatment-card__stars i.treatment-card__star--muted {
+    color: rgba(5, 36, 59, 0.15);
+}
+
+.treatment-card__details {
+    flex: 1;
+}
+
+.treatment-card__subtitle {
+    font-size: 0.9rem;
+    color: var(--hst-blue);
+}
+
+.treatment-card__list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.treatment-card__list li {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    color: var(--hst-charcoal);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.treatment-card__list li::before {
+    content: "\f00c";
+    font-family: FontAwesome;
+    color: var(--hst-green);
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    font-size: 0.9rem;
+}
+
+.treatment-card__cta {
+    min-width: 200px;
+}
+
+@media screen and (max-width: 991.98px) {
+    .treatment-card__cta {
+        width: 100%;
+    }
+
+    .treatment-card__cta .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 
 
 .top-choices.bg-white .bg-light {display: none !important;} 
