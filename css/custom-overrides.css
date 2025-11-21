@@ -270,11 +270,20 @@ body {font-size: 14px !important;}
 }
 
 .success-stories .story-card {
-    padding: 2rem 1.5rem !important;
-    margin-bottom: 1.5rem !important;
+    padding: 2.25rem 1.75rem 2.5rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.success-stories .row.g-4 {
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .success-stories .row.g-4 > [class*="col-"] {
+    margin-bottom: 0 !important;
+}
+
+.success-stories .row.g-4 > [class*="col-"]:last-child .story-card {
     margin-bottom: 0 !important;
 }
 
