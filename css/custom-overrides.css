@@ -206,6 +206,85 @@ td {font-weight: 400;}
 .sticky-module-container .btn-danger {width: 285px !important; height: fit-content; padding: .5rem 1rem; place-self: center; grid-area: stickyCta; border-color: var(--hst-green) !important; font-weight: 600 !important;}
 .sticky-module-container .btn-danger {background-color: var(--hst-green) !important; color: var(--hst-navy) !important;}
 .sticky-module:hover .sticky-module-container .btn-danger, .sticky-module-container .btn-danger:hover {background-color: var(--hst-blue) !important; border-color: var(--hst-blue) !important; color: #FFFFFF !important;} 
+/*Logo highlight*/
+.logo-section {
+    margin-bottom: 0.75rem;
+}
+
+.logo-section .logo-medvi {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.5rem;
+}
+
+.logo-section .logo-medvi img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+}
+
+.logo-section .logo-medvi.logo-text-only,
+.product-logo-text,
+.expandable-logo-text {
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--hst-blue);
+}
+
+.product-logo-text,
+.expandable-logo-text {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid var(--hst-ice);
+    border-radius: 6px;
+    background-color: #FFFFFF;
+}
+
+.product-logo-image {
+    display: block;
+    margin: 0 auto 0.75rem;
+    max-width: 180px;
+    height: auto;
+}
+
+.medvi-benefits {
+    text-align: left;
+}
+
+.medvi-benefits p {
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: var(--hst-blue);
+}
+
+.product-logo-wordmark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    font-weight: 700;
+    font-size: 1.35rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.product-logo-wordmark .word-primary {
+    color: var(--hst-charcoal);
+}
+
+.product-logo-wordmark .word-secondary {
+    color: var(--hst-blue);
+}
+
+.top-choices.vendor_MEDVi .product-details-list li:nth-child(1) {
+    display: block !important;
+}
 /*Product Image*/
 .product-details-list li:nth-child(1) {display: none;}
 
