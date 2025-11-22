@@ -18,14 +18,22 @@
             document.body.style.overflow = lock ? 'hidden' : '';
         };
 
+        const setExpanded = (state) => {
+            if (openBtn) {
+                openBtn.setAttribute('aria-expanded', String(state));
+            }
+        };
+
         const openMenu = () => {
             menu.classList.add('active');
             toggleBodyScroll(true);
+            setExpanded(true);
         };
 
         const closeMenu = () => {
             menu.classList.remove('active');
             toggleBodyScroll(false);
+            setExpanded(false);
         };
 
         openBtn?.addEventListener('click', openMenu);
@@ -48,10 +56,30 @@
 
         const toggleDropdown = (event) => {
             event.preventDefault();
-            dropdown.classList.toggle('active');
+            const isOpen = dropdown.classList.toggle('active');
+            dropdownBtn.setAttribute('aria-expanded', String(isOpen));
         };
 
         dropdownBtn.addEventListener('click', toggleDropdown);
+    };
+
+    const initDesktopDropdown = () => {
+        const dropdown = document.getElementById('treatments-dropdown');
+        const dropdownBtn = document.getElementById('treatments-btn');
+        if (!dropdown || !dropdownBtn) return;
+
+        const setExpanded = (state) => {
+            dropdownBtn.setAttribute('aria-expanded', String(state));
+        };
+
+        dropdown.addEventListener('mouseenter', () => setExpanded(true));
+        dropdown.addEventListener('mouseleave', () => setExpanded(false));
+        dropdown.addEventListener('focusin', () => setExpanded(true));
+        dropdown.addEventListener('focusout', (event) => {
+            if (!dropdown.contains(event.relatedTarget)) {
+                setExpanded(false);
+            }
+        });
     };
 
     const initNavHighlight = () => {
@@ -501,6 +529,7 @@
     ready(() => {
         initMobileMenu();
         initMobileDropdown();
+        initDesktopDropdown();
         initNavHighlight();
         initStickyModule();
         initModals();

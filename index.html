@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#05243B">
+    <meta name="color-scheme" content="light">
     
     <!-- SEO Meta Tags -->
     <title>HealthStarTrust | Treatment Insights</title>
@@ -19,11 +23,20 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="HealthStarTrust | Treatment Insights">
     <meta property="og:description" content="HealthStarTrust compares the best treatments with research-backed reviews, transparent pricing, and safety notes so you can find what works for you.">
+    <meta property="og:url" content="https://healthstartrust.com/">
+    <meta property="og:site_name" content="HealthStarTrust">
+    <meta property="og:image" content="https://healthstartrust.com/public/hero/hero%20section%20image%20for%20the%20website.jpg">
+    <meta property="og:image:alt" content="HealthStarTrust hero banner featuring trusted treatment partners">
+    <meta property="og:image:width" content="1600">
+    <meta property="og:image:height" content="900">
+    <meta property="og:image:type" content="image/jpeg">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="HealthStarTrust | Treatment Insights">
     <meta name="twitter:description" content="HealthStarTrust compares the best treatments with research-backed reviews, transparent pricing, and safety notes so you can find what works for you.">
+    <meta name="twitter:image" content="https://healthstartrust.com/public/hero/hero%20section%20image%20for%20the%20website.jpg">
+    <meta name="twitter:image:alt" content="HealthStarTrust hero banner featuring trusted treatment partners">
     
         <style>
         /* Critical header + hero CSS */
@@ -354,6 +367,57 @@
                 max-width: none;
             }
         }
+
+        .pros-cons-heading {
+            list-style: none;
+            padding-left: 0;
+            margin: 0 0 0.35rem;
+        }
+
+        .pros-cons-heading::before {
+            display: none !important;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 1rem;
+            background: var(--hst-blue);
+            color: #FFFFFF;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            z-index: 999;
+            transition: top 0.2s ease;
+        }
+
+        .skip-link:focus {
+            top: 1rem;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .custom-header-nav-link,
+        .custom-header-nav-dropdown-btn,
+        .custom-header-contact-btn {
+            min-height: 44px;
+            padding: 0.75rem 1rem;
+        }
+
+        .custom-header-contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
     
     <!-- Favicon -->
@@ -361,18 +425,46 @@
     
         <!-- Performance-optimized assets -->
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preload" href="/fonts.googleapis.com/css2" as="style">
-    <link rel="stylesheet" href="/fonts.googleapis.com/css2">
+    <link rel="stylesheet" href="/fonts.googleapis.com/css2" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/fonts.googleapis.com/css2"></noscript>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" as="style">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"></noscript>
-    <link rel="preload" href="/dist/assets/site.min.css" as="style">
-    <link rel="stylesheet" href="/dist/assets/site.min.css" fetchpriority="high">
+    <link rel="preload" href="/dist/assets/site.min.css" as="style" fetchpriority="high">
+    <link rel="stylesheet" href="/dist/assets/site.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/dist/assets/site.min.css"></noscript>
     <script src="/dist/assets/site.min.js" defer></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://healthstartrust.com/#organization",
+                "name": "HealthStarTrust",
+                "url": "https://healthstartrust.com/",
+                "logo": "https://healthstartrust.com/assets/logo.svg"
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://healthstartrust.com/#website",
+                "url": "https://healthstartrust.com/",
+                "name": "HealthStarTrust | Treatment Insights",
+                "description": "HealthStarTrust compares the best treatments with research-backed reviews, transparent pricing, and safety notes so you can find what works for you.",
+                "publisher": {
+                    "@id": "https://healthstartrust.com/#organization"
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="global-chart logooffer-stacked">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     
     <!--Top Disclosure-->
     <div class="header-container">
@@ -395,38 +487,38 @@
         <div class="custom-header-wrapper">
             <div class="custom-header-content">
                 <a href="/" class="custom-header-logo">
-                    <img src="/assets/logo.svg" width="40" height="40" alt="HealthStarTrust Logo" class="w-10 h-10">
+                    <img src="/assets/logo.svg" width="40" height="40" alt="HealthStarTrust Logo" class="w-10 h-10" decoding="async">
                     <div class="custom-header-logo-text">
                         <span class="logo-title">HealthStarTrust.com</span>
                         <span class="logo-subtitle">Your dedicated source for Treatments</span>
                     </div>
                 </a>
                 
-                <div class="custom-header-nav">
+                <nav class="custom-header-nav" aria-label="Primary">
                     <ul class="custom-header-nav-links">
                         <li><a href="/" class="custom-header-nav-link">Home</a></li>
                         <li><a href="/about-us" class="custom-header-nav-link">About Us</a></li>
                         <li class="custom-header-nav-dropdown" id="treatments-dropdown">
-                            <button type="button" class="custom-header-nav-dropdown-btn" id="treatments-btn">
+                            <button type="button" class="custom-header-nav-dropdown-btn" id="treatments-btn" aria-haspopup="true" aria-expanded="false" aria-controls="desktop-treatments-menu">
                                 Treatments
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="m6 9 6 6 6-6"></path>
                                 </svg>
                             </button>
-                            <ul class="custom-header-dropdown-menu">
-                                <li><a href="/treatments/eye-care">Eye Care</a></li>
-                                <li><a href="/treatments/weight-loss">Weight Loss</a></li>
-                                <li><a href="/treatments/anticoagulant">Anticoagulant</a></li>
-                                <li><a href="/treatments/asthma">Asthma</a></li>
-                                <li><a href="/treatments/antifungal">Antifungal</a></li>
-                                <li><a href="/treatments/fertility">Fertility</a></li>
+                            <ul class="custom-header-dropdown-menu" id="desktop-treatments-menu">
+                                <li><a href="/treatments/eye-care" class="custom-header-nav-link">Eye Care</a></li>
+                                <li><a href="/treatments/weight-loss" class="custom-header-nav-link">Weight Loss</a></li>
+                                <li><a href="/treatments/anticoagulant" class="custom-header-nav-link">Anticoagulant</a></li>
+                                <li><a href="/treatments/asthma" class="custom-header-nav-link">Asthma</a></li>
+                                <li><a href="/treatments/antifungal" class="custom-header-nav-link">Antifungal</a></li>
+                                <li><a href="/treatments/fertility" class="custom-header-nav-link">Fertility</a></li>
                             </ul>
                         </li>
                         <li><a href="/disclosure" class="custom-header-nav-link">Disclosure</a></li>
                     </ul>
                     
                     <div class="custom-header-mobile-buttons">
-                        <button type="button" class="custom-header-mobile-btn" id="mobile-menu-btn" aria-label="Open menu">
+                        <button type="button" class="custom-header-mobile-btn" id="mobile-menu-btn" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="4" x2="20" y1="12" y2="12"></line>
                                 <line x1="4" x2="20" y1="6" y2="6"></line>
@@ -436,7 +528,7 @@
                     </div>
                     
                     <a href="/contact" class="custom-header-contact-btn">Contact</a>
-                </div>
+                </nav>
             </div>
         </div>
     </header>
@@ -446,7 +538,7 @@
         <div class="custom-header-mobile-menu-content">
             <div class="custom-header-mobile-menu-header">
                 <a href="/" class="custom-header-logo">
-                    <img src="/assets/logo.svg" width="40" height="40" alt="HealthStarTrust Logo" class="w-10 h-10">
+                    <img src="/assets/logo.svg" width="40" height="40" alt="HealthStarTrust Logo" class="w-10 h-10" decoding="async">
                     <div class="custom-header-logo-text">
                         <span class="logo-title">HealthStarTrust.com</span>
                         <span class="logo-subtitle">Your dedicated source for Treatments</span>
@@ -459,17 +551,17 @@
                     </svg>
                 </button>
             </div>
-            <ul class="custom-header-mobile-menu-links">
+            <ul class="custom-header-mobile-menu-links" aria-label="Mobile primary navigation">
                 <li><a href="/" class="active">Home</a></li>
                 <li><a href="/about-us">About Us</a></li>
                 <li class="custom-header-mobile-nav-dropdown" id="mobile-treatments-dropdown">
-                    <button type="button" class="custom-header-mobile-nav-dropdown-btn" id="mobile-treatments-btn">
+                    <button type="button" class="custom-header-mobile-nav-dropdown-btn" id="mobile-treatments-btn" aria-expanded="false" aria-controls="mobile-treatments-menu">
                         Treatments
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="m6 9 6 6 6-6"></path>
                         </svg>
                     </button>
-                    <ul class="custom-header-mobile-dropdown-menu">
+                    <ul class="custom-header-mobile-dropdown-menu" id="mobile-treatments-menu">
                         <li><a href="/treatments/eye-care">Eye Care</a></li>
                         <li><a href="/treatments/weight-loss">Weight Loss</a></li>
                         <li><a href="/treatments/anticoagulant">Anticoagulant</a></li>
@@ -495,7 +587,7 @@
                     <p class="home-subtitle hero-subtitle mb-4 text-white">Every day, thousands of people trust our platform to make informed health decisions. Our team dives deep to provide you with the best treatments and health solutions available.</p>
 
                     <p class="badge rounded-25 p-2 px-4 text-white" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); font-weight: 500;">
-                            Last Updated: <span data-current-month="">November 2025</span>
+                            Last Updated: <span data-current-month="" aria-live="polite"></span>
                     </p>
                 </div>
             </div>
@@ -513,7 +605,7 @@
 </div>
             <div class="carousel-content-box">
                 <div class="carousel-image-container">
-                    <img class="carousel-image" src="assets.leads_iq.com/dedb765c_828b_44b6_af0a_9e0c7cc3e55c.svg" width="380" height="129" alt="Ro logo" loading="lazy">
+                    <img class="carousel-image" src="assets.leads_iq.com/dedb765c_828b_44b6_af0a_9e0c7cc3e55c.svg" width="380" height="129" alt="Ro logo" loading="lazy" decoding="async">
                     <p>$15 off your first order</p>
                 </div>
                 <div class="carousel-rating-wrapper">
@@ -566,7 +658,7 @@
             
             <div class="carousel-content-box">
                 <div class="carousel-image-container">
-                    <img class="carousel-image" src="assets.leads_iq.com/606c2e01_5f2d_4818_97e0_a3c2a643fd4a.svg" width="380" height="129" alt="hims logo" loading="lazy">
+                    <img class="carousel-image" src="assets.leads_iq.com/606c2e01_5f2d_4818_97e0_a3c2a643fd4a.svg" width="380" height="129" alt="hims logo" loading="lazy" decoding="async">
                     <p>Less than $2 a dose</p>
                 </div>
                 <div class="carousel-rating-wrapper">
@@ -647,7 +739,7 @@
         <div class="ribbon-container">
     <div class="ribbon-wrapper" style="display:block">
         <span class="ribbon blue">
-            <span class="ribbon-text" data-current-month="" data-current-month-prefix="Editor's Choice - ">Editor's Choice - November 2025</span>
+            <span class="ribbon-text" data-current-month="" data-current-month-prefix="Editor's Choice - " aria-live="polite"></span>
         </span>
     </div>
     
@@ -707,7 +799,7 @@
                 </div>
             </div>
             <div class="offerImage-wrapper">
-                <img class="w-100 mt-3 product-offer-image" src="ldsiq_public.s3.us_east_2.amazonaws.com/b813d920_27f6_4043_8c76_aad8170f1bc4.png" width="200" height="150" alt="Image" loading="lazy">
+                <img class="w-100 mt-3 product-offer-image" src="ldsiq_public.s3.us_east_2.amazonaws.com/b813d920_27f6_4043_8c76_aad8170f1bc4.png" width="200" height="150" alt="Zepbound offer preview" loading="lazy" decoding="async">
             </div>
             <div class="col-md-4 col-lg-5 product-details pr-md-0">
                 <hr class="d-block d-md-none my-0">
@@ -815,7 +907,7 @@
                 </div>
             </div>
             <div class="offerImage-wrapper">
-                <img class="w-100 mt-3 product-offer-image" src="ldsiq_public.s3.us_east_2.amazonaws.com/ba3e4c17_492b_41d6_9bb6_2cf9d039d5e3.png" width="200" height="150" alt="Image" loading="lazy">
+                <img class="w-100 mt-3 product-offer-image" src="ldsiq_public.s3.us_east_2.amazonaws.com/ba3e4c17_492b_41d6_9bb6_2cf9d039d5e3.png" width="200" height="150" alt="Rugiet Ready offer preview" loading="lazy" decoding="async">
             </div>
             <div class="col-md-4 col-lg-5 product-details pr-md-0">
                 <hr class="d-block d-md-none my-0">
@@ -860,8 +952,8 @@
 
 <a href="/click?offerId=2170&amp;offerLocation=chartbreak"> 
     <div class="gc-chartbreak">
-        <img loading="lazy" src="ldsiq_public.s3.us_east_2.amazonaws.com/dedb765c_828b_44b6_af0a_9e0c7cc3e55c.svg" width="380" height="129">
-        <h3>Get $15 Off Your First treatment order</h3>
+        <img loading="lazy" src="ldsiq_public.s3.us_east_2.amazonaws.com/dedb765c_828b_44b6_af0a_9e0c7cc3e55c.svg" width="380" height="129" alt="Ro limited-time badge" decoding="async">
+        <h2>Get $15 Off Your First treatment order</h2>
         <p>100% online with discreet, fast shipping</p>
     </div>
 </a></div>
@@ -934,7 +1026,7 @@
                 </div>
             </div>
             <div class="offerImage-wrapper">
-                <img class="w-100 mt-3 product-offer-image" src="ldsiq_public.s3.us_east_2.amazonaws.com/77888100_eaa5_4531_8784_7e2374738c13.png" width="200" height="150" alt="Image" loading="lazy">
+                <img class="w-100 mt-3 product-offer-image" src="ldsiq_public.s3.us_east_2.amazonaws.com/77888100_eaa5_4531_8784_7e2374738c13.png" width="200" height="150" alt="Hims treatment kit preview" loading="lazy" decoding="async">
             </div>
             <div class="col-md-4 col-lg-5 product-details pr-md-0">
                 <hr class="d-block d-md-none my-0">
@@ -1549,7 +1641,7 @@
                 </div>
             </div>
             <div class="offerImage-wrapper">
-                <img class="w-100 mt-3 product-offer-image" src="ldsiq_public.s3.us_east_2.amazonaws.com/b813d920_27f6_4043_8c76_aad8170f1bc4.png" width="200" height="150" alt="Image" loading="lazy">
+                <img class="w-100 mt-3 product-offer-image" src="ldsiq_public.s3.us_east_2.amazonaws.com/b813d920_27f6_4043_8c76_aad8170f1bc4.png" width="200" height="150" alt="Zepbound offer preview" loading="lazy" decoding="async">
             </div>
             <div class="col-md-4 col-lg-5 product-details pr-md-0">
                 <hr class="d-block d-md-none my-0">
@@ -1613,7 +1705,7 @@
         <div class="ribbon-container">
     <div class="ribbon-wrapper" style="display:block">
         <span class="ribbon blue">
-            <span class="ribbon-text" data-current-month="" data-current-month-prefix="Editor's Choice - ">Editor's Choice - November 2025</span>
+            <span class="ribbon-text" data-current-month="" data-current-month-prefix="Editor's Choice - " aria-live="polite"></span>
         </span>
     </div>
     
@@ -1627,7 +1719,7 @@
                     </p>
                     <img class="ml-3 ml-md-0 product-image" src="assets/providers/pharmaserve-logo.png" width="380" height="129" alt="Pharmaserve logo" loading="lazy">
                     <div class="offerImage-wrapper">
-                        <img class="w-100 mt-3 product-offer-image" src="ldsiq_public.s3.us_east_2.amazonaws.com/b813d920_27f6_4043_8c76_aad8170f1bc4.png" width="200" height="150" alt="Image" loading="lazy">
+                        <img class="w-100 mt-3 product-offer-image" src="ldsiq_public.s3.us_east_2.amazonaws.com/b813d920_27f6_4043_8c76_aad8170f1bc4.png" width="200" height="150" alt="Zepbound offer preview" loading="lazy" decoding="async">
                     </div>
                     
                 </div>
@@ -1723,7 +1815,7 @@
     
 
         <div class="expandable-image-box">
-            <img class="w-100 mt-3" src="assets.leads_iq.com/b813d920_27f6_4043_8c76_aad8170f1bc4.png" width="200" height="150" alt="Image" loading="lazy">
+            <img class="w-100 mt-3" src="assets.leads_iq.com/b813d920_27f6_4043_8c76_aad8170f1bc4.png" width="200" height="150" alt="Zepbound offer preview" loading="lazy" decoding="async">
         </div>
         <a href="https://wellnesstracker-compare.lovable.app/" target="_blank" rel="nofollow noopener" class="btn btn-link expandable-review-link reviews-available-enhanced" data-location="expandable-cta" data-co-id="12029" data-position="1" data-vendor="Ro">Reviews Available</a>
         <a href="https://wellnesstracker-compare.lovable.app/" rel="nofollow noopener" class="btn btn-link expandable-vendor-link ml-auto" data-location="expandable-cta" data-co-id="12029" data-position="1" data-vendor="Ro">Visit Site</a>
@@ -1752,7 +1844,7 @@
                     </p>
                     <img class="ml-3 ml-md-0 product-image" src="assets.leads_iq.com/818d5e74_10df_4f0c_be08_40ddbc93fd64.svg" width="380" height="129" alt="Rugiet logo" loading="lazy">
                     <div class="offerImage-wrapper">
-                        <img class="w-100 mt-3 product-offer-image" src="ldsiq_public.s3.us_east_2.amazonaws.com/ba3e4c17_492b_41d6_9bb6_2cf9d039d5e3.png" width="200" height="150" alt="Image" loading="lazy">
+                        <img class="w-100 mt-3 product-offer-image" src="ldsiq_public.s3.us_east_2.amazonaws.com/ba3e4c17_492b_41d6_9bb6_2cf9d039d5e3.png" width="200" height="150" alt="Rugiet Ready offer preview" loading="lazy" decoding="async">
                     </div>
                     
                 </div>
@@ -1847,7 +1939,7 @@
     
 
         <div class="expandable-image-box">
-            <img class="w-100 mt-3" src="" width="200" height="150" alt="Image" loading="lazy">
+            <img class="w-100 mt-3" src="ldsiq_public.s3.us_east_2.amazonaws.com/ba3e4c17_492b_41d6_9bb6_2cf9d039d5e3.png" width="200" height="150" alt="Rugiet Ready offer preview" loading="lazy" decoding="async">
         </div>
         <a href="https://wellnesstracker-compare.lovable.app/" target="_blank" rel="nofollow noopener" class="btn btn-link expandable-review-link reviews-available-enhanced" data-location="expandable-cta" data-co-id="16387" data-position="2" data-vendor="Rugiet">Reviews Available</a>
         <a href="https://wellnesstracker-compare.lovable.app/" rel="nofollow noopener" class="btn btn-link expandable-vendor-link ml-auto" data-location="expandable-cta" data-co-id="16387" data-position="2" data-vendor="Rugiet">Visit Site</a>
@@ -1860,8 +1952,8 @@
 
 <a href="/click?offerId=2170&amp;offerLocation=chartbreak"> 
     <div class="gc-chartbreak">
-        <img loading="lazy" src="ldsiq_public.s3.us_east_2.amazonaws.com/dedb765c_828b_44b6_af0a_9e0c7cc3e55c.svg" width="380" height="129">
-        <h3>Get $15 Off Your First treatment order</h3>
+        <img loading="lazy" src="ldsiq_public.s3.us_east_2.amazonaws.com/dedb765c_828b_44b6_af0a_9e0c7cc3e55c.svg" width="380" height="129" alt="Ro limited-time badge" decoding="async">
+        <h2>Get $15 Off Your First treatment order</h2>
         <p>100% online with discreet, fast shipping</p>
     </div>
 </a></div>
@@ -1888,7 +1980,7 @@
                     </p>
                     <img class="ml-3 ml-md-0 product-image" src="assets.leads_iq.com/606c2e01_5f2d_4818_97e0_a3c2a643fd4a.svg" width="380" height="129" alt="hims logo" loading="lazy">
                     <div class="offerImage-wrapper">
-                        <img class="w-100 mt-3 product-offer-image" src="ldsiq_public.s3.us_east_2.amazonaws.com/77888100_eaa5_4531_8784_7e2374738c13.png" width="200" height="150" alt="Image" loading="lazy">
+                        <img class="w-100 mt-3 product-offer-image" src="ldsiq_public.s3.us_east_2.amazonaws.com/77888100_eaa5_4531_8784_7e2374738c13.png" width="200" height="150" alt="Hims treatment kit preview" loading="lazy" decoding="async">
                     </div>
                     
                 </div>
@@ -1983,7 +2075,7 @@
     
 
         <div class="expandable-image-box">
-            <img class="w-100 mt-3" src="assets.leads_iq.com/77888100_eaa5_4531_8784_7e2374738c13.png" width="200" height="150" alt="Image" loading="lazy">
+            <img class="w-100 mt-3" src="assets.leads_iq.com/77888100_eaa5_4531_8784_7e2374738c13.png" width="200" height="150" alt="Hims treatment kit preview" loading="lazy" decoding="async">
         </div>
         <a href="https://wellnesstracker-compare.lovable.app/" target="_blank" rel="nofollow noopener" class="btn btn-link expandable-review-link reviews-available-enhanced" data-location="expandable-cta" data-co-id="12030" data-position="3" data-vendor="hims">Reviews Available</a>
         <a href="https://wellnesstracker-compare.lovable.app/" rel="nofollow noopener" class="btn btn-link expandable-vendor-link ml-auto" data-location="expandable-cta" data-co-id="12030" data-position="3" data-vendor="hims">Visit Site</a>
@@ -2574,7 +2666,7 @@
         <!--Top Choice Heading -->
         <div class="container topchoiceComponent">
             <div class="col-lg-12">
-                <h1 class="product-title text-center mb-0">Our Top Choice</h1>
+                <h2 class="product-title text-center mb-0">Our Top Choice</h2>
             </div>
         </div>
         
@@ -2595,7 +2687,7 @@
                     </p>
                     <img class="ml-3 ml-md-0 product-image" src="assets/providers/pharmaserve-logo.png" width="380" height="129" alt="Pharmaserve logo" loading="lazy">
                     <div class="offerImage-wrapper">
-                        <img class="w-100 mt-3 product-offer-image" src="ldsiq_public.s3.us_east_2.amazonaws.com/b813d920_27f6_4043_8c76_aad8170f1bc4.png" width="200" height="150" alt="Image" loading="lazy">
+                        <img class="w-100 mt-3 product-offer-image" src="ldsiq_public.s3.us_east_2.amazonaws.com/b813d920_27f6_4043_8c76_aad8170f1bc4.png" width="200" height="150" alt="Zepbound offer preview" loading="lazy" decoding="async">
                     </div>
                     
                 </div>
@@ -2691,7 +2783,7 @@
     
 
         <div class="expandable-image-box">
-            <img class="w-100 mt-3" src="assets.leads_iq.com/b813d920_27f6_4043_8c76_aad8170f1bc4.png" width="200" height="150" alt="Image" loading="lazy">
+            <img class="w-100 mt-3" src="assets.leads_iq.com/b813d920_27f6_4043_8c76_aad8170f1bc4.png" width="200" height="150" alt="Zepbound offer preview" loading="lazy" decoding="async">
         </div>
         <a href="https://wellnesstracker-compare.lovable.app/" target="_blank" rel="nofollow noopener" class="btn btn-link expandable-review-link reviews-available-enhanced" data-location="expandable-cta" data-co-id="12029" data-position="99" data-vendor="Ro">Reviews Available</a>
         <a href="https://wellnesstracker-compare.lovable.app/" rel="nofollow noopener" class="btn btn-link expandable-vendor-link ml-auto" data-location="expandable-cta" data-co-id="12029" data-position="99" data-vendor="Ro">Visit Site</a>
@@ -2722,7 +2814,7 @@
 <p class="visitor-count">1,804 people</p>
 <p class="visitor-msg">found a treatment for themselves this week.</p>
 </div>
-<img loading="lazy" src="assets.leads_iq.com/assets/img2/face.png" width="181" height="180" style="width: 60px;">
+<img loading="lazy" src="assets.leads_iq.com/assets/img2/face.png" width="181" height="180" style="width: 60px;" alt="Customer success avatar" decoding="async">
 </div>
 </div>
 </div>
@@ -2896,7 +2988,7 @@
                                   <!-- Treatment Process -->
                                   <div class="treatment-process mb-5">
                                       <div class="text-center mb-5">
-                                          <h3 class="article-title mb-3" style="font-size: 2.2rem; font-weight: 700; color: var(--hst-navy);">How Our Treatment Matching Works</h3>
+                                          <h2 class="article-title mb-3" style="font-size: 2.2rem; font-weight: 700; color: var(--hst-navy);">How Our Treatment Matching Works</h2>
                                           <p style="font-size: 1.1rem; color: rgba(32, 32, 32, 0.75); margin-bottom: 0;">Simple steps to find your perfect healthcare solution</p>
                                       </div>
                                       <div class="process-steps mb-4">
@@ -2946,7 +3038,7 @@
                                   <!-- Success Stories -->
                                   <div class="success-stories mb-5">
                                       <div class="text-center mb-5">
-                                          <h3 class="article-title mb-3" style="font-size: 2.2rem; font-weight: 700; color: var(--hst-navy);">Success Stories</h3>
+                                          <h2 class="article-title mb-3" style="font-size: 2.2rem; font-weight: 700; color: var(--hst-navy);">Success Stories</h2>
                                           <p style="font-size: 1.1rem; color: rgba(32, 32, 32, 0.75); margin-bottom: 0;">Real experiences from real people who found their solution</p>
                                       </div>
                                       <div class="row g-4 mb-4">
@@ -3065,13 +3157,13 @@
     <div class="mini-review-right">
         <div class="chart-review-pros-cons">
             <ul class="pros-cons-list review-pros-list">
-                <h4 class="pros-cons-title">Pros</h4>
+                <li class="pros-cons-heading"><h4 class="pros-cons-title" id="pros-title-ro">Pros</h4></li>
                 <li>Unlimited follow-up visits for free (if needed)</li>
                 <li>Affordable medication prices</li>
                 <li>100% fully online process</li>
             </ul>
             <ul class="pros-cons-list review-cons-list">
-                <h4 class="pros-cons-title">Cons</h4>
+                <li class="pros-cons-heading"><h4 class="pros-cons-title" id="cons-title-ro">Cons</h4></li>
                 <li>Not available in ND</li>
                 <li>Not all products and services are covered by insurance</li>
             </ul>
@@ -3146,13 +3238,13 @@
     <div class="mini-review-right">
         <div class="chart-review-pros-cons">
             <ul class="pros-cons-list review-pros-list">
-                <h4 class="pros-cons-title">Pros</h4>
+                <li class="pros-cons-heading"><h4 class="pros-cons-title" id="pros-title-rugiet">Pros</h4></li>
                 <li>Fast-acting (15 min or less)</li>
                 <li>Targets the mind and body</li>
                 <li>4 customizable doses</li>
             </ul>
             <ul class="pros-cons-list review-cons-list">
-                <h4 class="pros-cons-title">Cons</h4>
+                <li class="pros-cons-heading"><h4 class="pros-cons-title" id="cons-title-rugiet">Cons</h4></li>
                 <li>Higher doses may cost more</li>
                 <li>Only available online</li>
             </ul>
@@ -3227,13 +3319,13 @@
     <div class="mini-review-right">
         <div class="chart-review-pros-cons">
             <ul class="pros-cons-list review-pros-list">
-                <h4 class="pros-cons-title">Pros</h4>
+                <li class="pros-cons-heading"><h4 class="pros-cons-title" id="pros-title-hims">Pros</h4></li>
                 <li>100% online process</li>
                 <li>Fast, discreet shipping</li>
                 <li>FDA-approved options</li>
             </ul>
             <ul class="pros-cons-list review-cons-list">
-                <h4 class="pros-cons-title">Cons</h4>
+                <li class="pros-cons-heading"><h4 class="pros-cons-title" id="cons-title-hims">Cons</h4></li>
                 <li>Detailed questionnaire</li>
                 <li>Longer follow-up wait times</li>
             </ul>
@@ -3334,7 +3426,7 @@
 <div class="sticky-module" data-location="chart-sticky-bottom" data-co-id="12029" data-vendor="Ro"> 
     <div class="sticky-module-container">
         <div class="sticky-image-score-box">
-            <img loading="lazy" src="ldsiq_public.s3.us_east_2.amazonaws.com/dedb765c_828b_44b6_af0a_9e0c7cc3e55c.svg" width="380" height="129" alt="Remedy Med Logo">
+            <img loading="lazy" src="ldsiq_public.s3.us_east_2.amazonaws.com/dedb765c_828b_44b6_af0a_9e0c7cc3e55c.svg" width="380" height="129" alt="Remedy Med Logo" decoding="async">
             <div class="sticky-module-rating">
                 <div class="rating-pt">9.8</div>
                 <div class="star-rating-wrapper">
@@ -3364,7 +3456,7 @@
             <div class="row footer-wrapper">
                 <div class="col-8 mx-auto col-md-6 col-lg-4 mt-3 mt-md-5">
                     <a href="/" class="custom-header-logo d-flex align-items-center justify-content-center">
-                        <img src="/assets/logo.svg" alt="HealthStarTrust Logo" class="w-10 h-10">
+                        <img src="/assets/logo.svg" alt="HealthStarTrust Logo" class="w-10 h-10" decoding="async">
                         <div class="custom-header-logo-text">
                             <span class="logo-title">HealthStarTrust.com</span>
                             <span class="logo-subtitle">Your dedicated source for Treatments</span>
