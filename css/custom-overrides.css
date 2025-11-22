@@ -30,6 +30,7 @@ a:hover {
 .btn-view-plan::after {content: "\f061"; margin-left: .5rem; font-family: FontAwesome;}
 div.card-header {padding-bottom: .5rem !important;}
 .home-image {padding-top: 0 !important;}
+
 /*Ribbons*/
 span.ribbon.yellow, span.ribbon.blue {background: var(--hst-blue) !important;}
 span.ribbon.yellow::before, span.ribbon.blue::before {border-top: 7px solid var(--hst-navy) !important;}
