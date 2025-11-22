@@ -162,6 +162,20 @@
         });
     };
 
+    const initDynamicMonthLabels = () => {
+        const targets = document.querySelectorAll('[data-current-month]');
+        if (!targets.length) return;
+
+        const formatter = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' });
+        const currentMonth = formatter.format(new Date());
+
+        targets.forEach((target) => {
+            const prefix = target.dataset.currentMonthPrefix || '';
+            const suffix = target.dataset.currentMonthSuffix || '';
+            target.textContent = `${prefix}${currentMonth}${suffix}`;
+        });
+    };
+
     const initTreatmentCards = () => {
         const stacks = document.querySelectorAll('.treatment-card-stack');
         if (!stacks.length) return;
@@ -490,6 +504,7 @@
         initNavHighlight();
         initStickyModule();
         initModals();
+        initDynamicMonthLabels();
         initTreatmentCards();
     });
 })();
